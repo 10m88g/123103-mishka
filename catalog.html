@@ -4,70 +4,86 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
+
   <body>
+
     <header class="page-header">
-      <div class="page-header__logo">
+
+      <a class="page-header__logo">
         <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
-      </div>
-      <div class="page-header__nav">
-        <!-- Пока заглушка -->
+      </a>
+
+      <nav class="page-header__nav">
+        <!-- Не успел, позже доверстаю -->
         <img src="img/page-header__nav" width="25" height="25">
-      </div>
+      </nav>
+
     </header>
 
 
     <main>
-      <h1 class="main-header">Каталог товаров</h1>
+
+      <h1 class="page-title">Каталог товаров</h1>
 
       <section class="goods-container">
 
         <article class="goods-card card">
-          <img src="img/card-rabbit" alt="Зайчик" class="goods-card__pict" width="260" height="195">
+          <a href="#" title="Зайчик-попрыгайчик">
+            <img class="goods-card__picture" src="img/card-rabbit" alt="Зайчик" width="260" height="195">
 
-          <h2 class="goods-card__title">Зайчик-попрыгайчик</h2>
+            <h2 class="goods-card__title">Зайчик-попрыгайчик</h2>
+          </a>
+
           <p class="goods-card__decs">Рост 30 см, вес 200 г</p>
 
-          <div class="goods-card__price">
+          <p class="goods-card__price">
             <span class="goods-card__price-value">1 200 руб.</span>
-            <button class="goods-card__buy">Заказать</button>
-          </div>
+            <a class="goods-card__buy" href="#" title="Заказать">Заказать</a>
+          </p>
         </article>
 
         <article class="goods-card card">
-          <img src="img/card-basket" alt="Корзинка для белья" class="goods-card__pict" width="260" height="195">
+          <a href="#" title="Корзинка для белья">
+            <img class="goods-card__picture" src="img/card-basket" alt="Корзинка для белья" width="260" height="195">
 
-          <h2 class="goods-card__title">Корзинка для белья</h2>
+            <h2 class="goods-card__title">Корзинка для белья</h2>
+          </a>
+
           <p class="goods-card__decs">Диаметр 15 см, высота 10 см</p>
 
-          <div class="goods-card__price">
+          <p class="goods-card__price">
             <span class="goods-card__price-value">690 руб.</span>
-            <button class="goods-card__buy">Заказать</button>
-          </div>
+            <a class="goods-card__buy" href="#" title="Заказать">Заказать</a>
+          </p>
         </article>
 
         <article class="goods-card card">
-          <img src="img/card-basket-big" alt="Большая корзинка" class="goods-card__pict" width="260" height="195">
+          <a href="#" title="Большая корзинка">
+            <img class="goods-card__picture" src="img/card-basket-big" alt="Большая корзинка" width="260" height="195">
 
-          <h2 class="goods-card__title">Большая корзинка для игрушек</h2>
+            <h2 class="goods-card__title">Большая корзинка для игрушек</h2>
+          </a>
+
           <p class="goods-card__decs">Диаметр 30 см, высота 30 см</p>
 
-          <div class="goods-card__price">
+          <p class="goods-card__price">
             <span class="goods-card__price-value">1 500 руб.</span>
-            <button class="goods-card__buy">Заказать</button>
-          </div>
-        </article>
-
-        <article class="process-card card">
-          <h2 class="process-card__title">Процесс производства</h2>
-
-          <img src="img/video" alt="Процесс производства" class="process-card__pict" width="260" height="150">
-
-          <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
-
-          <button class="process-card__order btn">Сделать заказ</button>
+            <a class="goods-card__buy" href="#" title="Заказать">Заказать</a>
+          </p>
         </article>
 
       </section>
+
+      <article class="process-card card">
+        <h2 class="process-card__title">Процесс производства</h2>
+
+        <video src="#" poster="img/video" class="process-card__video" width="260" height="150">
+        </video>
+
+        <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
+
+        <a class="process-card__order btn" href="#" title="Сделать заказать">Сделать заказ</a>
+      </article>
 
     </main>
 
