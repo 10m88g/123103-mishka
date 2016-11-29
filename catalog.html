@@ -9,13 +9,14 @@
 
     <header class="page-header">
 
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
       </a>
 
-      <nav class="page-header__nav">
-        <!-- Не успел, позже доверстаю -->
-        <img src="img/page-header__nav" width="25" height="25">
+      <nav class="page-header__nav main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
+          <img width="25" height="25">
+        </button>
       </nav>
 
     </header>
@@ -25,7 +26,7 @@
 
       <h1 class="page-title">Каталог товаров</h1>
 
-      <section class="goods-container">
+      <section class="goods-cards-container">
 
         <article class="goods-card card">
           <a href="#" title="Зайчик-попрыгайчик">
@@ -38,7 +39,10 @@
 
           <p class="goods-card__price">
             <span class="goods-card__price-value">1 200 руб.</span>
-            <a class="goods-card__buy" href="#" title="Заказать">Заказать</a>
+
+            <a href="#" title="Заказать">
+              <button class="goods-card__buy">Заказать</button>
+            </a>
           </p>
         </article>
 
@@ -53,7 +57,9 @@
 
           <p class="goods-card__price">
             <span class="goods-card__price-value">690 руб.</span>
-            <a class="goods-card__buy" href="#" title="Заказать">Заказать</a>
+            <a href="#" title="Заказать">
+              <button class="goods-card__buy">Заказать</button>
+            </a>
           </p>
         </article>
 
@@ -68,22 +74,28 @@
 
           <p class="goods-card__price">
             <span class="goods-card__price-value">1 500 руб.</span>
-            <a class="goods-card__buy" href="#" title="Заказать">Заказать</a>
+            <a href="#" title="Заказать">
+              <button class="goods-card__buy">Заказать</button>
+            </a>
           </p>
         </article>
 
       </section>
 
-      <article class="process-card card">
-        <h2 class="process-card__title">Процесс производства</h2>
+      <section class="process-cards-container">
+        <article class="process-card card">
+          <h2 class="process-card__title">Процесс производства</h2>
 
-        <video src="#" poster="img/video" class="process-card__video" width="260" height="150">
-        </video>
+          <video src="#" poster="img/video" class="process-card__video" width="260" height="150">
+          </video>
 
-        <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
+          <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
 
-        <a class="process-card__order btn" href="#" title="Сделать заказать">Сделать заказ</a>
-      </article>
+          <a href="#" title="Сделать заказ">
+            <button class="process-card__order btn">Сделать заказ</button>
+          </a>
+        </article>
+      </section>
 
     </main>
 

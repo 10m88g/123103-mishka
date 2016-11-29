@@ -13,9 +13,10 @@
         <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
       </a>
 
-      <nav class="page-header__nav">
-        <!-- Не успел, позже доверстаю -->
-        <img src="img/page-header__nav" width="25" height="25">
+      <nav class="page-header__nav main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
+          <img width="25" height="25">
+        </button>
       </nav>
 
     </header>
@@ -26,19 +27,20 @@
       <section class="jumbotron">
         <h1 class="page-title">Милые штучки ручной работы для дома</h1>
           <!-- Картинка в бэкраунде -->
+
+        <!-- nav-add - всё-равно что-то не то :-/ -->
+        <nav class="nav-add">
+          <a src="#" class="nav-add__item  nav-add__item--lamp">
+            <span class="nav-add__item-text">Предметы интерьера</span>
+            <!-- Иконки в :after -->
+          </a>
+
+          <a src="#" class="nav-add__item  nav-add__item--lego">
+            <span class="nav-add__item-text">Детские игрушки</span>
+          </a>
+        </nav>
       </section>
 
-      <!-- nav-add - всё-равно что-то не то :-/ -->
-      <nav class="nav-add">
-        <a src="#" class="nav-add__item  nav-add__item--lamp">
-          <span class="nav-add__item-text">Предметы интерьера</span>
-          <!-- Иконки в :after -->
-        </a>
-
-        <a src="#" class="nav-add__item  nav-add__item--lego">
-          <span class="nav-add__item-text">Детские игрушки</span>
-        </a>
-      </nav>
 
 
       <article class="goods-week-card card">
@@ -121,33 +123,32 @@
 
 
       <section class="contacts">
-
         <h2 class="contacts__header">Контакты</h2>
 
-        <div class="contacts__mail">
-          <span class="contacts__mail-name">e-mail:</span>
-          <a class="contacts__mail-value" href="mailto:info@mimimishkashop.ru">
-            info@mimimishkashop.ru
-          </a>
-        </div>
+        <dl>
+          <dt class="contacts__mail">e-mail:</dt>
+          <dd class="contacts__mail-value">
+            <a class="contacts__mail-value" href="mailto:info@mimimishkashop.ru">
+              info@mimimishkashop.ru
+            </a>
+          </dd>
 
-        <div class="contacts__addr">
-          <span class="contacts__addr-name">адрес:</span>
-          <span class="contacts__addr-value">
+          <dt class="contacts__addr">адрес:</dt>
+          <dd class="contacts__addr-value">
             г. Санкт-Петербург,
             ул. Большая
             Конюшенная,
             д. 19/8, офис 101
-          </span>
-        </div>
+          </dd>
+        </dl>
+      </section>
 
-        <section class="map"></section>
-
+      <section class="map">
         <div class="mailus">
           <a href="mailto:htmla@mail.ru">Напишите нам</button>
         </div>
-
       </section>
+
 
     </main>
 
