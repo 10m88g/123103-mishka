@@ -6,9 +6,146 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
   </head>
+
   <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
+      </a>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+      <nav class="page-header__nav main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
+        </button>
+      </nav>
+    </header>
 
+
+    <main>
+      <section class="jumbotron">
+        <h1 class="page-title">Милые штучки ручной работы для дома</h1>
+
+        <nav class="nav-add">
+          <a src="#" class="nav-add__item  nav-add__item--lamp">
+            <span class="nav-add__item-text">Предметы интерьера</span>
+            <!-- Иконки в :after -->
+          </a>
+
+          <a src="#" class="nav-add__item  nav-add__item--lego">
+            <span class="nav-add__item-text">Детские игрушки</span>
+          </a>
+        </nav>
+      </section>
+
+      <article class="goods-week-card">
+        <a title="Вязанная корзинка" src="#">
+          <h2 class="goods-week-card__title">
+            Вязанные корзинки
+            <span class="goods-week-card__title-label">Товар недели</span>
+          </h2>
+        </a>
+
+        <p class="goods-week-card__desc">
+          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.
+        </p>
+
+        <dl class="goods-week-card__info">
+          <dt class="goods-week-card__info-name">Цвет:</dt>
+          <dd class="goods-week-card__info-definit">"Тиффани"/серый</dd>
+
+          <dt class="goods-week-card__info-name">Диаметр:</dt>
+          <dd class="goods-week-card__info-definit">25см</dd>
+
+          <dt class="goods-week-card__info-name">Высота:</dt>
+          <dd class="goods-week-card__info-definit">15см</dd>
+        </dl>
+
+        <a href="#" title="Вязанная корзинка">
+          <img class="goods-week-card__picture" src="img/knitted-basket-big.img" alt="Вязанная корзинка" width="260" height="315">
+        </a>
+
+        <p class="goods-week-card__price">
+          Цена:
+          <span class="goods-week-card__price-value">990 руб.</span>
+        </p>
+
+        <a class="goods-week-card__buy btn" href="#" title="Заказать">Заказать</a>
+      </article>
+
+      <section class="about-us">
+        <h2 class="about-us__header">Коротко о нас</h2>
+        <ul class="about-us__fact-list">
+          <!-- Иконки в :before -->
+          <li class="about-us__fact  about-us__fact--flower">Экологически чистые материалы</li>
+          <li class="about-us__fact  about-us__fact--brick">Скандинавский стиль по российской цене</li>
+          <li class="about-us__fact  about-us__fact--heart">Увеличивает лайки на фотографиях</li>
+          <li class="about-us__fact  about-us__fact--clew">Связано вручную с любовью и умилением</li>
+          <li class="about-us__fact  about-us__fact--rocket">Поддержка отечественного производителя</li>
+          <li class="about-us__fact  about-us__fact--present">Поставляется в подарочной упаковке</li>
+        </ul>
+      </section>
+
+      <section class="feedbacks">
+        <h2 class="feedbacks__header">Отзывы</h2>
+
+        <div class="feedbacks__item item-feedback">
+          <blockquote class="item-feedback__text">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+          </blockquote>
+
+          <p class="item-feedback__author">
+            <span class="item-feedback__author-name">Анастасия Красильникова</span>
+            <a class="item-feedback__author-twitter" href="#">@misssssiskras</a>
+          </p>
+        </div>
+
+        <div class="feedbacks__control">
+          <button class="feedbacks__control__left btn btn--control" type="button">←</button>
+          <button class="feedbacks__control__right btn btn--control" type="button">→</button>
+        </div>
+
+        <a href="#" class="feedback__add-btn btn" title="Написать">Написать</a>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__header">Контакты</h2>
+
+        <dl>
+          <dt class="contacts__mail">e-mail:</dt>
+          <dd class="contacts__mail-value">
+            <a href="mailto:info@mimimishkashop.ru" class="contacts__mail-value" title="Написать">
+              info@mimimishkashop.ru
+            </a>
+          </dd>
+
+          <dt class="contacts__addr">адрес:</dt>
+          <dd class="contacts__addr-value">
+            г. Санкт-Петербург,
+            ул. Большая
+            Конюшенная,
+            д. 19/8, офис 101
+          </dd>
+        </dl>
+      </section>
+
+      <section class="map">
+        <div class="map__mailus">
+          <a href="mailto:htmla@mail.ru">Напишите нам</a>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="page-footer">
+      <div class="page-footer__social  social-links">
+        <a href="#" class="social-link  social-link--inst">Instagram</a>
+        <a href="#" class="social-link  social-link--fb">Facebook</a>
+        <a href="#" class="social-link  social-link--twit">Twitter</a>
+      </div>
+
+      <div class="page-footer__copyright">
+        <span>Разработано:</span>
+        <a href="#">HTML Academy</a>
+      </div>
+    </footer>
   </body>
 </html>
