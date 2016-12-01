@@ -1,0 +1,43 @@
+.nav-add {
+  position: relative;
+  width: $full-width;
+
+  &__item {
+    display: block;
+
+    /*min-height: 100px;*/
+    padding-top: 20px;
+    padding-left: ($full-width - $content-width)/2;
+    padding-bottom: 34px;
+    padding-right: 180px;
+
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+
+    &--lamp {
+      background-color: #63d1bb;
+    }
+
+    &--lamp::after {
+      content: url("../img/icon-interior.svg");
+      position: absolute;
+      top: 20px;
+      right: 35px;
+    }
+
+    &--lego {
+      background-color: #56c3b2;
+    }
+
+    &--lego::after {
+      content: url("../img/icon-toy.svg");
+      position: absolute;
+      right: 25px;
+      /*ВОТ ТУТ ВОПРОС: как правильно эти иконки позиц-ть. Относительно чего*/
+      bottom: 20px;
+    }
+  }
+}

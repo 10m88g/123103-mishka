@@ -2,19 +2,37 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Мишка: Форма заказа</title>
+    <title>Форма заказа</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
 
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
+        <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
       </a>
 
       <nav class="page-header__nav main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button">
-        </button>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+
+            <li class="main-nav__item main-nav__item--active">
+              <a>Вязание на заказ</a>
+            </li>
+
+            <li class="main-nav__item main-nav__item--find">
+              <a href="#">Поиск по сайту</a>
+            </li>
+
+            <li class="main-nav__item main-nav__item--bascket">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 

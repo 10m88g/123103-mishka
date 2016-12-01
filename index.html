@@ -2,27 +2,78 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
   </head>
 
   <body>
+    <!-- Модальное окно -->
+    <div class="modal" hidden>
+      <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
+
+      <p class="modal__desc">Выберите размер:</p>
+
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal__btn-block">
+          <input type="radio" class="modal__input-radio" id="size-S" name="size" value="S" checked>
+          <label for="size-S" class="modal__label-radio">
+            S
+          </label>
+
+          <input class="modal__input-radio" id="size-M" type="radio" name="size" value="M">
+          <label class="modal__label-radio" for="size-M">
+            M
+          </label>
+
+          <input class="modal__input-radio" id="size-L" type="radio" name="size" value="L">
+          <label class="modal__label-radio" for="size-L">
+            L
+          </label>
+
+        </div>
+        <button type="submit" class="modal__btn-submit">Добавить</button>
+      </form>
+    </div>
+
+
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
+        <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
       </a>
 
-      <nav class="page-header__nav main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button">
-        </button>
+      <nav class="page-header__nav main-nav main-nav--opened">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <!-- Немного не доверстал выпадающую менюшку -->
+        <div class="main-nav__wrapper" hidden>
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+
+            <li class="main-nav__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+
+            <li class="main-nav__item main-nav__item--find">
+              <a href="#">Поиск по сайту</a>
+            </li>
+
+            <li class="main-nav__item main-nav__item--bascket">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
 
     <main>
       <section class="jumbotron">
-        <h1 class="page-title">Милые штучки ручной работы для дома</h1>
+        <h1 class="page-title">
+          Милые штуки <br>
+          ручной<br>
+          работы для дома</h1>
 
         <nav class="nav-add">
           <a src="#" class="nav-add__item  nav-add__item--lamp">
@@ -39,7 +90,7 @@
       <article class="goods-week-card">
         <a title="Вязанная корзинка" src="#">
           <h2 class="goods-week-card__title">
-            Вязанные корзинки
+            Вязанные корзинки<br>
             <span class="goods-week-card__title-label">Товар недели</span>
           </h2>
         </a>
@@ -49,18 +100,24 @@
         </p>
 
         <dl class="goods-week-card__info">
-          <dt class="goods-week-card__info-name">Цвет:</dt>
-          <dd class="goods-week-card__info-definit">"Тиффани"/серый</dd>
+          <div class="goods-week-card__info-row">
+            <dt class="goods-week-card__info-name">Цвет:</dt>
+            <dd class="goods-week-card__info-definit">"Тиффани"/серый</dd>
+          </div>
 
-          <dt class="goods-week-card__info-name">Диаметр:</dt>
-          <dd class="goods-week-card__info-definit">25см</dd>
+          <div class="goods-week-card__info-row">
+            <dt class="goods-week-card__info-name">Диаметр:</dt>
+            <dd class="goods-week-card__info-definit">25см</dd>
+          </div>
 
-          <dt class="goods-week-card__info-name">Высота:</dt>
-          <dd class="goods-week-card__info-definit">15см</dd>
+          <div class="goods-week-card__info-row">
+            <dt class="goods-week-card__info-name">Высота:</dt>
+            <dd class="goods-week-card__info-definit">15см</dd>
+          </div>
         </dl>
 
         <a href="#" title="Вязанная корзинка">
-          <img class="goods-week-card__picture" src="img/knitted-basket-big.img" alt="Вязанная корзинка" width="260" height="315">
+          <img class="goods-week-card__picture" src="img/triple-set-mobile@1x.jpg" alt="Вязанная корзинка" width="260" height="315">
         </a>
 
         <p class="goods-week-card__price">
@@ -99,52 +156,63 @@
         </div>
 
         <div class="feedbacks__control">
-          <button class="feedbacks__control__left btn btn--control" type="button">←</button>
-          <button class="feedbacks__control__right btn btn--control" type="button">→</button>
+          <button class="feedbacks__control-btn  feedbacks__control-btn--left  btn" type="button">
+            <img src="img/icon-left-arrow.svg" alt="left">
+          </button>
+
+          <button class="feedbacks__control-btn  feedbacks__control-btn--right  btn" type="button">
+            <img src="img/icon-right-arrow.svg" alt="right">
+          </button>
         </div>
 
-        <a href="#" class="feedback__add-btn btn" title="Написать">Написать</a>
+        <a href="#" class="feedbacks__add-btn btn" title="Написать">НАПИСАТЬ</a>
       </section>
 
       <section class="contacts">
         <h2 class="contacts__header">Контакты</h2>
 
         <dl>
-          <dt class="contacts__mail">e-mail:</dt>
-          <dd class="contacts__mail-value">
-            <a href="mailto:info@mimimishkashop.ru" class="contacts__mail-value" title="Написать">
-              info@mimimishkashop.ru
-            </a>
-          </dd>
+          <div class="contacts__row">
+            <dt class="contacts__key">e-mail:</dt>
+            <dd class="contacts__key-value">
+              <a href="mailto:info@mimimishkashop.ru" title="Написать">
+                info@mimimishkashop.ru
+              </a>
+            </dd>
+          </div>
 
-          <dt class="contacts__addr">адрес:</dt>
-          <dd class="contacts__addr-value">
-            г. Санкт-Петербург,
-            ул. Большая
-            Конюшенная,
-            д. 19/8, офис 101
-          </dd>
+          <div class="contacts__row">
+            <dt class="contacts__key">адрес:</dt>
+            <dd class="contacts__key-value">
+              г. Санкт-Петербург,
+              ул. Большая
+              Конюшенная,
+              д. 19/8, офис 101
+            </dd>
+          </div>
         </dl>
       </section>
 
       <section class="map">
-        <div class="map__mailus">
-          <a href="mailto:htmla@mail.ru">Напишите нам</a>
+        <img src="img/map-mobile@1x.jpg" alt="map" width="320" height="457">
+
+        <div class="map__mailus  btn">
+          <a href="mailto:htmla@mail.ru">НАПИШИТЕ НАМ</a>
         </div>
       </section>
     </main>
 
 
     <footer class="page-footer">
-      <div class="page-footer__social  social-links">
-        <a href="#" class="social-link  social-link--inst">Instagram</a>
-        <a href="#" class="social-link  social-link--fb">Facebook</a>
-        <a href="#" class="social-link  social-link--twit">Twitter</a>
+      <div class="page-footer__socials">
+        <a href="#" class="page-footer__social-link  page-footer__social-link--insta">Instagram</a>
+        <a href="#" class="page-footer__social-link  page-footer__social-link--fb">Facebook</a>
+        <a href="#" class="page-footer__social-link  page-footer__social-link--twitter">Twitter</a>
       </div>
 
       <div class="page-footer__copyright">
-        <span>Разработано:</span>
-        <a href="#">HTML Academy</a>
+        <span>Разработано</span>
+        <a href="#" class="page-footer__copyright-logo">HTML Academy</a>
       </div>
     </footer>
   </body>

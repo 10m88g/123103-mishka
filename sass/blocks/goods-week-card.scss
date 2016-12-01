@@ -1,0 +1,65 @@
+.goods-week-card {
+  width: $content-width;
+  margin: $content-margin;
+  margin-bottom: 40px;
+
+  font-size: 19px;
+  line-height: 24px;
+  color: #444444;
+
+  &__title {
+
+    margin-top: 22px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+
+    &-label {
+      font-size: 17px;
+      line-height: 16px;
+      color: #63d1bb;
+    }
+  }
+
+  &__dec {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__info {
+    margin-bottom: 29px;
+    font-size: 15px;
+    line-height: 20px;
+
+    &-name {
+      float: left;
+      width: 95px;
+    }
+
+    &-definit {
+      float: left;
+      margin: 0;
+    }
+
+    &-row {
+      margin-top: 5px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ececec;
+    }
+
+    &-row::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__price {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
