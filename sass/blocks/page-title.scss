@@ -3,8 +3,15 @@
   margin: $content-margin;
   padding-top: 66px;
   margin-bottom: 126px;
-
   font-size: 27px;
   line-height: 30px;
+  font-weight: bold;
   text-align: center;
+
+  &--catalog,
+  &--form {
+    background-color: #f1f1f1;
+    padding-bottom: 80px;
+    margin-bottom: 30px;
+  }
 }

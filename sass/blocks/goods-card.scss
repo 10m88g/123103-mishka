@@ -1,0 +1,38 @@
+.goods-card {
+  margin-bottom: 30px;
+  border: 1px solid #ededed;
+
+  &__title {
+    margin-top: 20px;
+    margin-left: 29px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  &__decs {
+    margin-left: 29px;
+    font-size: 13px;
+    line-height: 30px;
+    color: #444444;
+  }
+
+  &__price {
+    margin-left: 27px;
+    margin-right: 27px;
+    padding-top: 15px;
+    border-top: 1px solid #ececec;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  &__order-btn {
+    float: right;
+    font-size: 0;
+
+    &:before {
+      content: url('../img/icon-cart.svg')
+    }
+  }
+}
