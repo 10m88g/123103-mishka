@@ -1,6 +1,5 @@
 .process-card {
-  width: $content-width;
-  margin: $content-margin;
+  position: relative;
   margin-bottom: 58px;
   border: 1px solid #ededed;
 
@@ -20,16 +19,14 @@
     }
   }
 
-  &__video {
-    position: relative;
-    // Что-то не то:(
-    &:before {
-      content: url('../img/icon-play.svg');
-      position: absolute;
-      left: 80px;
-      top: 40px;
-      z-index: 2;
-    }
+  &__video-btn {
+    position: absolute;
+    left: 80px;
+    top: 130px;
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
   }
 
   &__decs {

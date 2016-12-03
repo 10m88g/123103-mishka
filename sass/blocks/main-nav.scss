@@ -1,10 +1,10 @@
 .main-nav {
-  width: $full-width;
-  margin: $content-margin;
+  position: relative;
+  border-bottom: 1px solid #ececec;
 
   &__toggle {
     position: absolute;
-    top: 27px;
+    top: -50px;
     right: 30px;
 
     width: 20px;
@@ -18,26 +18,65 @@
     cursor: pointer;
   }
 
-  &__toggle::before {
+  &__toggle:focus {
+    outline: none;
+  }
+
+  &__toggle:before {
     content: url("../img/icon-menu-open.svg");
   }
 
+  &--opened .main-nav__toggle:before {
+    content: url("../img/icon-menu-close.svg");
+  }
+
   &__wrapper {
-    position: relative;
-    top: 80px;
+    width: $full-width;
+    margin: $content-margin;
+    position: absolute;
+    display: none;
     left: 0;
     right: 0;
     background-color: #fff;
     z-index: 2;
   }
 
+  &--opened .main-nav__wrapper {
+    display: block;
+  }
+
   &__items {
+    margin: 0;
+    padding: 0;
     list-style: none;
   }
 
   &__item {
-    min-height: 55px;
+    position: relative;
+
+    &--find:before {
+      content: url("../img/icon-search.svg");
+      position: absolute;
+      top: 28px;
+      left: 30px;
+    }
+
+    &--bascket:before {
+      content: url("../img/icon-cart.svg");
+      position: absolute;
+      top: 28px;
+      left: 30px;
+    }
+  }
+
+  &__item a {
+    display: block;
     padding-top: 20px;
+    padding-left: 75px;
+    padding-bottom: 33px;
+    border-top: 1px solid #ececec;
+    font-size: 17px;
+    line-height: 24px;
     font-weight: bold;
   }
 }

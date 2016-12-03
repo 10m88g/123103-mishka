@@ -1,9 +1,12 @@
 .item-feedback {
+  margin: 0;
+  margin-bottom: 35px;
   color: #444444;
 
   &__text {
     margin: 0;
     margin-top: 20px;
+    margin-bottom: 30px;
     font-size: 15px;
     line-height: 30px;
   }
