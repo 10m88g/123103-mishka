@@ -1,0 +1,34 @@
+.contacts {
+
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+  &__header {
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &-row::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &__key {
+    float: left;
+    width: 75px;
+
+    &-value {
+      margin: 0;
+      margin-left: 75px;
+      width: auto;
+    }
+
+    &-value a {
+      padding-bottom: 6px;
+      border-bottom: 1px solid #62d1ba;
+    }
+  }
+
+}

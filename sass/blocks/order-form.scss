@@ -1,0 +1,76 @@
+.order-form {
+  margin-bottom: 55px;
+  font-size: 17px;
+  line-height: 18px;
+
+
+  &__legend {
+    padding: 0;
+    padding-right: 30px;
+    font-size: 17px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #63d1bb;
+  }
+
+  &__fieldset {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    padding-top: 30px;
+    border: none;
+    border-top: 1px solid #62d1ba;
+  }
+
+  &__label-radio,
+  &__label-checkbox {
+    display: block;
+    margin-top: 40px;
+
+    font-weight: bold;
+  }
+
+
+
+  &__label-text  input {
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 16px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+  }
+
+  &__fieldset--phone input,
+  &__fieldset--mail input{
+    display: block;
+    width: 100%;
+    padding: 0;
+    // padding-right: 40px;
+    padding-bottom: 16px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+  }
+
+  &__fieldset--addition textarea {
+    box-sizing: border-box;
+    width: $content-width;
+    padding: 20px 15px;
+    border: 2px solid #444444;
+    outline: none;
+  }
+
+  &__req-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
+  }
+
+  &__submit {
+    width: $content-width;
+  }
+}

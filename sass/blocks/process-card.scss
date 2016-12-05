@@ -1,0 +1,44 @@
+.process-card {
+  position: relative;
+  margin-bottom: 58px;
+  border: 1px solid #ededed;
+
+  &__title {
+    position: relative;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    padding-left: 90px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+
+    &:before {
+      content: url('../img/icon-video.svg');
+      position: absolute;
+      left: 33px;
+    }
+  }
+
+  &__video-btn {
+    position: absolute;
+    left: 80px;
+    top: 130px;
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  &__decs {
+    margin: 21px 33px 30px 33px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #444444;
+  }
+
+  &__order {
+    margin-left: 33px;
+    margin-right: 33px;
+    margin-bottom: 32px;
+  }
+}

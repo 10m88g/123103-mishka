@@ -2,114 +2,171 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
 
   <body>
+    <div class="page-wrapper">
+      <!-- Модальное окно -->
+      <div class="modal" hidden>
+        <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
 
-    <header class="page-header">
+        <p class="modal__desc">Выберите размер:</p>
 
-      <a class="page-header__logo" href="index.html">
-        <img src="img/page-header__logo.svg" width="90" height="40" alt="Mishka">
-      </a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="modal__btn-block">
+            <input type="radio" class="modal__input-radio" id="size-S" name="size" value="S" checked>
+            <label for="size-S" class="modal__label-radio">
+              S
+            </label>
 
-      <nav class="page-header__nav main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button">
-        </button>
-      </nav>
+            <input class="modal__input-radio" id="size-M" type="radio" name="size" value="M">
+            <label class="modal__label-radio" for="size-M">
+              M
+            </label>
 
-    </header>
+            <input class="modal__input-radio" id="size-L" type="radio" name="size" value="L">
+            <label class="modal__label-radio" for="size-L">
+              L
+            </label>
 
-
-    <main>
-
-      <h1 class="page-title">Каталог товаров</h1>
-
-      <section class="goods-cards-container">
-
-        <article class="goods-card card">
-          <a href="#" title="Зайчик-попрыгайчик">
-            <img class="goods-card__picture" src="img/card-rabbit" alt="Зайчик" width="260" height="195">
-
-            <h2 class="goods-card__title">Зайчик-попрыгайчик</h2>
-          </a>
-
-          <p class="goods-card__decs">Рост 30 см, вес 200 г</p>
-
-          <p class="goods-card__price">
-            <span class="goods-card__price-value">1 200 руб.</span>
-
-            <a href="#" title="Заказать">
-              <button class="goods-card__buy">Заказать</button>
-            </a>
-          </p>
-        </article>
-
-        <article class="goods-card card">
-          <a href="#" title="Корзинка для белья">
-            <img class="goods-card__picture" src="img/card-basket" alt="Корзинка для белья" width="260" height="195">
-
-            <h2 class="goods-card__title">Корзинка для белья</h2>
-          </a>
-
-          <p class="goods-card__decs">Диаметр 15 см, высота 10 см</p>
-
-          <p class="goods-card__price">
-            <span class="goods-card__price-value">690 руб.</span>
-            <a href="#" title="Заказать">
-              <button class="goods-card__buy">Заказать</button>
-            </a>
-          </p>
-        </article>
-
-        <article class="goods-card card">
-          <a href="#" title="Большая корзинка">
-            <img class="goods-card__picture" src="img/card-basket-big" alt="Большая корзинка" width="260" height="195">
-
-            <h2 class="goods-card__title">Большая корзинка для игрушек</h2>
-          </a>
-
-          <p class="goods-card__decs">Диаметр 30 см, высота 30 см</p>
-
-          <p class="goods-card__price">
-            <span class="goods-card__price-value">1 500 руб.</span>
-            <a href="#" title="Заказать">
-              <button class="goods-card__buy">Заказать</button>
-            </a>
-          </p>
-        </article>
-
-      </section>
-
-      <section class="process-cards-container">
-        <article class="process-card card">
-          <h2 class="process-card__title">Процесс производства</h2>
-
-          <video src="#" poster="img/video" class="process-card__video" width="260" height="150">
-          </video>
-
-          <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
-
-          <a href="#" title="Сделать заказ">
-            <button class="process-card__order btn">Сделать заказ</button>
-          </a>
-        </article>
-      </section>
-
-    </main>
-
-
-    <footer class="page-footer">
-      <div class="page-footer__social  social-links">
-        <a href="#" class="social-link  social-link--inst">Instagram</a>
-        <a href="#" class="social-link  social-link--fb">Facebook</a>
-        <a href="#" class="social-link  social-link--twit">Twitter</a>
-      </div>
-      <div class="page-footer__copyright">
-        <span>Разработано:</span>
-        <a href="#">HTML Academy</a>
+          </div>
+          <button type="submit" class="modal__btn-submit">Добавить</button>
+        </form>
       </div>
 
-    </footer>
+
+      <header class="page-header">
+        <!-- <div class="content-wrapper"> -->
+          <a href="index.html" class="page-header__logo">
+            <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+          </a>
+
+          <nav class="page-header__nav main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__items">
+                <li class="main-nav__item">
+                  <a>Каталог товаров</a>
+                </li>
+
+                <li class="main-nav__item">
+                  <a href="form.html">Вязание на заказ</a>
+                </li>
+
+                <li class="main-nav__item main-nav__item--find">
+                  <a href="#">Поиск по сайту</a>
+                </li>
+
+                <li class="main-nav__item main-nav__item--bascket">
+                  <a href="#">Корзина: пока пуста</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <!-- </div> -->
+      </header>
+
+
+      <main>
+        <h1 class="page-title page-title--catalog">Каталог товаров</h1>
+
+        <div class="content-wrapper">
+          <!-- <section class="goods-cards-container"> -->
+            <article class="goods-card">
+              <a href="#" title="Зайчик-попрыгайчик">
+                <img class="goods-card__picture" src="img/photo-1-mobile@1x.jpg" alt="Зайчик" width="260" height="195">
+              </a>
+
+              <a href="#" title="Зайчик-попрыгайчик">
+                <h2 class="goods-card__title">Зайчик-попрыгайчик</h2>
+              </a>
+
+              <p class="goods-card__decs">Рост 30 см, вес 200 г</p>
+
+              <p class="goods-card__price">
+                <span class="goods-card__price-value">1 200 руб.</span>
+                <a href="#" class="goods-card__order-btn" title="Заказать">
+                  Заказать
+                </a>
+              </p>
+            </article>
+
+            <article class="goods-card">
+              <a href="#" title="Корзинка для белья">
+                <img class="goods-card__picture" src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+              </a>
+
+              <a href="#" title="Корзинка для белья">
+                <h2 class="goods-card__title">Корзинка для белья</h2>
+              </a>
+
+              <p class="goods-card__decs">Диаметр 15 см, высота 10 см</p>
+
+              <p class="goods-card__price">
+                <span class="goods-card__price-value">690 руб.</span>
+                <a href="#" class="goods-card__order-btn" title="Заказать">
+                  Заказать
+                </a>
+              </p>
+            </article>
+
+            <article class="goods-card">
+              <a href="#" title="Большая корзинка">
+                <img class="goods-card__picture" src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка" width="260" height="195">
+              </a>
+
+              <a href="#" title="Большая корзинка">
+                <h2 class="goods-card__title">Большая корзинка для игрушек</h2>
+              </a>
+
+              <p class="goods-card__decs">Диаметр 30 см, высота 30 см</p>
+
+              <p class="goods-card__price">
+                <span class="goods-card__price-value">1 500 руб.</span>
+                <a href="#" class="goods-card__order-btn" title="Заказать">
+                  Заказать
+                </a>
+              </p>
+            </article>
+          <!-- </section> -->
+
+          <section class="process-card">
+              <h2 class="process-card__title">Процесс производства</h2>
+
+              <video src="#" poster="img/video-mobile@1x.jpg" class="process-card__video" width="260" height="150">
+              </video>
+              <button type="button" class="process-card__video-btn">
+                <img src="img/icon-play.svg" alt="Play">
+              </button>
+
+              <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
+
+              <a href="#" class="process-card__order btn" title="Сделать заказ">
+                Сделать заказ
+              </a>
+          </section>
+        </div>
+      </main>
+
+
+      <footer class="page-footer">
+        <div class="content-wrapper">
+          <div class="page-footer__socials">
+            <a href="#" class="page-footer__social-link  page-footer__social-link--insta">Instagram</a>
+            <a href="#" class="page-footer__social-link  page-footer__social-link--fb">Facebook</a>
+            <a href="#" class="page-footer__social-link  page-footer__social-link--twitter">Twitter</a>
+          </div>
+
+          <div class="page-footer__copyright">
+            <span>Разработано</span>
+            <a href="#" class="page-footer__copyright-logo">HTML Academy</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
+  <script src="js/app.js"></script>
+
 </html>

@@ -1,0 +1,56 @@
+.modal {
+  width: $content-width;
+  margin: $content-margin;
+
+  text-align: center;
+
+  &__header {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-size: 15px;
+    line-height: 30px;
+    color: #444444;
+  }
+
+  &__label-radio {
+    display: inline-block;
+    width: 78px;
+    padding-top: 14px;
+    padding-bottom: 18px;
+
+    border: 2px solid #ececec;
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+  }
+
+  &__input-radio {
+    display: none;
+  }
+
+  &__input-radio:checked + &__label-radio {
+    border: 2px solid #63d1bb;
+  }
+
+  &__btn-submit {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 16px;
+    padding-bottom: 17px;
+    border: none;
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: bold;
+    background-color: #63d1bb;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+}

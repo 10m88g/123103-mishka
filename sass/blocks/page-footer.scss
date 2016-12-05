@@ -1,0 +1,56 @@
+.page-footer {
+  padding-top: 20px;
+  // border-top: 1px solid #f1f1f1;
+  // border-bottom: 1px solid #f1f1f1;
+  background-color: #f1f1f1;
+
+  &__socials {
+    margin-top: 25px;
+    padding-bottom: 25px;
+    font-size: 0;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__social-link {
+    display: inline-block;
+    vertical-align: bottom;
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &--insta:before {
+      content: url("../img/icon-insta.svg");
+    }
+
+    &--fb:before {
+      content: url("../img/icon-fb.svg");
+    }
+
+    &--twitter:before {
+      content: url("../img/icon-twitter.svg");
+    }
+  }
+
+  &__copyright {
+    // width: 180px;
+    // margin: 25px auto;
+    font-size: 19px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+
+    &-logo {
+      display: inline-block;
+      padding: 10px;
+      vertical-align: middle;
+      font-size: 0;
+    }
+
+    &-logo:before {
+      content: url("../img/logo-htmlacademy.svg");
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.feedbacks {
+
+  &__header {
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+  }
+
+  &__control {
+    position: relative;
+    height: 50px;
+
+    &-btn {
+      position: absolute;
+      width: 50%;
+      height: 50px;
+      // padding-top: 12px;
+      padding: 0;
+      border: 1px solid #ececec;
+    }
+    &-btn--left {
+      left: 0;
+    }
+
+    &-btn--right {
+      right: 0;
+      border-left: none;
+    }
+
+    &-btn img {
+      vertical-align: middle;
+    }
+
+  }
+
+  &__add-btn {
+    margin-top: 38px;
+    margin-bottom: 48px;
+  }
+}
