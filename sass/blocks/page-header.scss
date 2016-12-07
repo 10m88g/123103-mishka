@@ -4,13 +4,35 @@
   // margin: $content-margin;
   // padding-top: 20px;
   // padding-bottom: 20px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
 
   &__logo {
-    display: block;
-    margin: $content-margin;
+    align-self: center;
     width: 90px;
     height: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 }
+
+
+@media #{$tablet-width} {
+  .page-header{
+    min-height: 88px;
+
+    &__logo {
+      align-self: flex-start;
+      margin-left: 50px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .page-header__logo {
+    align-self: center;
+  }
+
+}
+

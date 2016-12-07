@@ -2,3 +2,15 @@
   width: $content-width;
   margin: $content-margin;
 }
+
+@media #{$tablet-width} {
+  .content-wrapper {
+    width: 668px;
+  }
+}
+
+@media #{$desktop-width} {
+  .content-wrapper {
+    width: 1050px;
+  }
+}

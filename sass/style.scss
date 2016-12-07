@@ -1,10 +1,7 @@
 @import "_normalize.scss";
 @import "variables.scss";
 
-@import "global/fonts.scss";
-@import "global/body.scss";
-@import "global/headers.scss";
-@import "global/a.scss";
+@import "global/scaffolding.scss";
 
 //COMMON
 @import "blocks/page-wrapper.scss";
@@ -18,7 +15,7 @@
 @import "blocks/btn.scss";
 
 @import "blocks/jumbotron.scss";
-@import "blocks/page-title.scss";
+// @import "blocks/page-title.scss";
 @import "blocks/nav-add.scss";
 @import "blocks/goods-week-card.scss";
 @import "blocks/about-us.scss";

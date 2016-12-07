@@ -1,7 +1,57 @@
 .jumbotron {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
   min-height: 280px;
-
+  margin: $content-margin;
   background: url('../img/hero-mobile@1x.jpg') no-repeat center top;
   background-color: #fafafa;
 
+  &__title {
+    flex-basis: 100%;
+    margin-top: 65px;
+    padding-left: 10px;
+    margin-bottom: 125px;
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+
+    &--catalog,
+    &--form {
+      background-color: #f1f1f1;
+      padding-bottom: 80px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__nav {
+    flex-basis: 100%;
+    align-self: flex-end;
+  }
+}
+
+@media #{$tablet-width} {
+  .jumbotron {
+    min-height: 745px;
+    width: 668px;
+    background: url('../img/hero-desktop.jpg') no-repeat center top;
+
+    &__title {
+      margin-top: 164px;
+      margin-bottom: 383px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .jumbotron {
+    width: 1150px;
+    background: url('../img/hero-desktop.jpg') no-repeat center top;
+
+    &__title {
+      margin-top: 170px;
+      margin-bottom: 383px;
+    }
+  }
 }

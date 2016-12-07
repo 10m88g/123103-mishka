@@ -1,4 +1,7 @@
 .goods-week-card {
+  display: flex;
+  // flex-direction: row-reverse;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 
   font-size: 19px;
@@ -6,22 +9,28 @@
   color: #444444;
 
   &__title {
-
+    flex-basis: 100%;
+    // order: 0;
     margin-top: 22px;
+    margin-bottom: 20px;
     font-size: 25px;
     line-height: 30px;
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-
-    &-label {
-      font-size: 17px;
-      line-height: 16px;
-      color: #63d1bb;
-    }
   }
 
-  &__dec {
+
+  &__title-label {
+    font-size: 17px;
+    line-height: 16px;
+    color: #63d1bb;
+    text-transform: uppercase;
+  }
+
+
+  &__desc {
+    flex-basis: 100%;
     font-size: 15px;
     line-height: 24px;
   }
@@ -47,17 +56,103 @@
       border-bottom: 1px solid #ececec;
     }
 
-    &-row::after {
+    &-row:after {
       content: '';
       display: table;
       clear: both;
     }
   }
 
+  &__picture {
+
+    & img {
+      width: 260px;
+      height: 315px;
+    }
+  }
+
   &__price {
+    flex-basis: 100%;
     font-size: 17px;
     line-height: 24px;
     font-weight: bold;
     text-align: center;
+  }
+
+}
+
+ @media #{$tablet-width} {
+  .goods-week-card {
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__title {
+      flex-basis: 75%;
+      font-size: 43px;
+      line-height: 50px;
+      align-self: center;
+    }
+
+    &__title-label {
+      flex-basis: 75px;
+      align-self: center;
+      text-align: center;
+    }
+
+    &__content {
+      position: relative;
+      height: 400px;
+      margin: $content-margin;
+      padding-right: 370px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__picture {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &__picture img {
+      width: 334px;
+      height: 404px;
+    }
+  }
+ }
+
+@media #{$desktop-width} {
+  .goods-week-card {
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__title-label {
+      order: -1;
+    }
+
+    &__desc {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__content {
+      padding-left: 175px;
+      padding-right: 580px;
+      height: 566px;
+    }
+
+
+    &__picture {
+      top: -70px;
+      z-index: -1;
+    }
+
+    &__picture img {
+      width: 525px;
+      height: 636px;
+    }
   }
 }

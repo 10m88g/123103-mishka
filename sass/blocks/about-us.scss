@@ -14,10 +14,68 @@
     list-style: none;
   }
 
+  &__fact-column {
+    width: 100%;
+  }
+
   &__fact {
+    position: relative;
+    width: 250px;
     padding-top: 83px;
     font-size: 17px;
     line-height: 20px;
     font-weight: bold;
   }
+
+  &__fact:before {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    color: #63d1bb;
+  }
+
+  &__fact--flower:before {
+    content: url("../img/icon-feature-1.svg");
+  }
+
+  &__fact--brick:before {
+    content: url("../img/icon-feature-2.svg");
+  }
+
+  &__fact--heart:before {
+    content: url("../img/icon-feature-3.svg");
+  }
+
+  &__fact--clew:before {
+    content: url("../img/icon-feature-4.svg");
+  }
+
+  &__fact--rocket:before {
+    content: url("../img/icon-feature-5.svg");
+  }
+
+  &__fact--present:before {
+    content: url("../img/icon-feature-6.svg");
+  }
 }
+@media #{$tablet-width} {
+  .about-us__fact-list:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .about-us__fact-column {
+    width: 49.9%;
+    float: left;
+  }
+}
+
+@media #{$desktop-width} {
+  .about-us {
+    box-sizing: border-box;
+    padding-left: 170px;
+  }
+}
+
+
