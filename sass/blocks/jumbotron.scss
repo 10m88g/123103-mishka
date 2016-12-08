@@ -2,10 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   /* flex-direction: column; */
-  min-height: 280px;
+  /* min-height: 280px; */
   margin: $content-margin;
   background: url('../img/hero-mobile@1x.jpg') no-repeat center top;
   background-color: #fafafa;
+
+  &--catalog,
+  &--form {
+    background: none;
+    background-color: #f1f1f1;
+  }
 
   &__title {
     flex-basis: 100%;
@@ -20,16 +26,10 @@
     &--catalog,
     &--form {
       background: none;
-      background-color: #f1f1f1;
-      padding-bottom: 80px;
-      margin-bottom: 30px;
+      margin-bottom: 80px;
     }
   }
 
-  &--catalog,
-  &--form {
-    background: none;
-  }
 
   &__nav {
     flex-basis: 100%;
@@ -39,17 +39,29 @@
 
 @media #{$tablet-width} {
   .jumbotron {
-    min-height: 745px;
+    /* min-height: 745px; */
     width: 668px;
     background: url('../img/hero-desktop.jpg') no-repeat center top;
 
     &--catalog,
     &--form {
+      /* margin-top: 87px;
+      margin-bottom: 85px; */
       background: none;
+      background-color: #f1f1f1;
     }
+
     &__title {
       margin-top: 164px;
       margin-bottom: 383px;
+      font-size: 43px;
+      line-height: 50px;
+
+      &--catalog,
+      &--form {
+        margin-top: 90px;
+        margin-bottom: 85px;
+      }
     }
   }
 }
@@ -61,6 +73,14 @@
     &__title {
       margin-top: 170px;
       margin-bottom: 383px;
+      font-size: 53px;
+      line-height: 57px;
+
+      &--catalog,
+      &--form {
+        margin-top: 90px;
+        margin-bottom: 85px;
+      }
     }
   }
 }

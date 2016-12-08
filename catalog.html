@@ -76,14 +76,16 @@
 
         <div class="content-wrapper">
           <section class="goods-cards-container">
-            <article class="goods-card">
-              <a href="#" title="Зайчик-попрыгайчик">
-                <img class="goods-card__picture" src="img/photo-1-mobile@1x.jpg" alt="Зайчик" width="260" height="195">
+            <article class="goods-cards-container__item goods-card">
+              <a href="#" class="goods-card__picture" title="Зайчик-попрыгайчик">
+                <img src="img/photo-1-mobile@1x.jpg" alt="Зайчик" width="260" height="195">
               </a>
-
-              <a href="#" title="Зайчик-попрыгайчик">
-                <h2 class="goods-card__title">Зайчик-попрыгайчик</h2>
-              </a>
+              <div class="goods-card__column">
+              <h2 class="goods-card__title">
+                <a href="#" title="Зайчик-попрыгайчик">
+                  Зайчик-попрыгайчик
+                </a>
+              </h2>
 
               <p class="goods-card__decs">Рост 30 см, вес 200 г</p>
 
@@ -93,16 +95,19 @@
                   Заказать
                 </a>
               </p>
+              </div>
             </article>
 
-            <article class="goods-card">
-              <a href="#" title="Корзинка для белья">
-                <img class="goods-card__picture" src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+            <article class="goods-cards-container__item goods-card">
+              <a class="goods-card__picture" href="#" title="Корзинка для белья">
+                <img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
               </a>
-
-              <a href="#" title="Корзинка для белья">
-                <h2 class="goods-card__title">Корзинка для белья</h2>
-              </a>
+              <div class="goods-card__column">
+              <h2 class="goods-card__title">
+                <a href="#" title="Корзинка для белья">
+                  Корзинка для белья
+                </a>
+              </h2>
 
               <p class="goods-card__decs">Диаметр 15 см, высота 10 см</p>
 
@@ -112,16 +117,19 @@
                   Заказать
                 </a>
               </p>
+              </div>
             </article>
 
-            <article class="goods-card">
-              <a href="#" title="Большая корзинка">
-                <img class="goods-card__picture" src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка" width="260" height="195">
+            <article class="goods-cards-container__item goods-card">
+              <a class="goods-card__picture" href="#" title="Большая корзинка">
+                <img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка" width="260" height="195">
               </a>
-
-              <a href="#" title="Большая корзинка">
-                <h2 class="goods-card__title">Большая корзинка для игрушек</h2>
-              </a>
+              <div class="goods-card__column">
+              <h2 class="goods-card__title">
+                <a href="#" title="Большая корзинка">
+                  Большая корзинка для игрушек
+                </a>
+              </h2>
 
               <p class="goods-card__decs">Диаметр 30 см, высота 30 см</p>
 
@@ -131,17 +139,20 @@
                   Заказать
                 </a>
               </p>
+              </div>
             </article>
           </section>
 
           <section class="process-card">
               <h2 class="process-card__title">Процесс производства</h2>
 
-              <video src="#" poster="img/video-mobile@1x.jpg" class="process-card__video" width="260" height="150">
-              </video>
-              <button type="button" class="process-card__video-btn">
-                <img src="img/icon-play.svg" alt="Play">
-              </button>
+              <div class="process-card__video-wrapper">
+                <video src="#" poster="img/video-mobile@1x.jpg" class="process-card__video" width="260" height="150">
+                </video>
+                <button type="button" class="process-card__video-btn">
+                  <img src="img/icon-play.svg" alt="Play">
+                </button>
+              </div>
 
               <p class="process-card__decs">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
 
@@ -154,7 +165,10 @@
 
 
       <footer class="page-footer">
-        <div class="content-wrapper">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo">
+            <img src="img/logo-mobile.svg" alt="Mishka">
+          </a>
           <div class="page-footer__socials">
             <a href="#" class="page-footer__social-link  page-footer__social-link--insta">Instagram</a>
             <a href="#" class="page-footer__social-link  page-footer__social-link--fb">Facebook</a>

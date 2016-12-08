@@ -1,4 +1,6 @@
 .goods-card {
+  dispaly: flex;
+  flex-direction: column;
   margin-bottom: 30px;
   border: 1px solid #ededed;
 
@@ -33,6 +35,51 @@
 
     &:before {
       content: url('../img/icon-cart.svg')
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .goods-card {
+    &__picture {
+      float: left;
+      margin-right: 25px;
+    }
+
+    &__picture,
+    &__picture img {
+      width: 334px;
+      height: 335px;
+    }
+
+    &__column {
+      margin-left: 360px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__price {
+      margin-top: 170px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .goods-card {
+    &__picture {
+      float: none;
+      margin-right: 0;
+    }
+
+
+    &__column {
+      margin-left: 0;
+    }
+
+    &__price {
+      margin-top: 0;
     }
   }
 }
