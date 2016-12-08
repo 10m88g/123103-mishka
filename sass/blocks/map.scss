@@ -2,12 +2,6 @@
   width: $full-width;
   margin-top: 45px;
   margin-bottom: 39px;
-
-  &__mailus {
-    width: $content-width;
-    margin: $content-margin;
-    margin-top: 39px;
-  }
 }
 
 @media #{$tablet-width} {

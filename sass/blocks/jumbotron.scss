@@ -19,10 +19,16 @@
 
     &--catalog,
     &--form {
+      background: none;
       background-color: #f1f1f1;
       padding-bottom: 80px;
       margin-bottom: 30px;
     }
+  }
+
+  &--catalog,
+  &--form {
+    background: none;
   }
 
   &__nav {
@@ -37,6 +43,10 @@
     width: 668px;
     background: url('../img/hero-desktop.jpg') no-repeat center top;
 
+    &--catalog,
+    &--form {
+      background: none;
+    }
     &__title {
       margin-top: 164px;
       margin-bottom: 383px;
@@ -47,7 +57,6 @@
 @media #{$desktop-width} {
   .jumbotron {
     width: 1150px;
-    background: url('../img/hero-desktop.jpg') no-repeat center top;
 
     &__title {
       margin-top: 170px;

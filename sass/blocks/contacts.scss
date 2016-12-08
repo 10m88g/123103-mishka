@@ -3,10 +3,21 @@
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+
+
   &__header {
     margin-top: 28px;
     font-size: 18px;
     line-height: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-row {
+    flex-basis: 100%;
   }
 
   &-row::after {
@@ -31,4 +42,75 @@
     }
   }
 
+  &__map {
+    width: $full-width;
+    margin-top: 45px;
+    margin-bottom: 39px;
+  }
+
+  &__mailus {
+    width: $content-width;
+    margin: $content-margin;
+    margin-top: 39px;
+    margin-bottom: 39px;
+  }
+}
+
+@media #{$tablet-width} {
+  .contacts {
+    &__header {
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+
+    &__row {
+      flex-basis: 50%;
+    }
+
+    &__map img {
+      width: 768px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .contacts {
+    position: relative;
+    box-sizing: border-box;
+    width: 1050px;
+    margin: $content-margin;
+    padding-left: 170px;
+    min-height: 500px;
+
+    &__header {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__map {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 525px;
+      margin: 0;
+    }
+
+    &__map img {
+      width: 525px;
+      height: 460px;
+    }
+
+    &__mailus {
+      margin: 0;
+      margin-top: 200px;
+    }
+  }
 }

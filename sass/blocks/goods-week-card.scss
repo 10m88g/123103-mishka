@@ -81,7 +81,7 @@
 
 }
 
- @media #{$tablet-width} {
+@media #{$tablet-width} {
   .goods-week-card {
     justify-content: space-between;
     align-items: flex-start;
@@ -120,7 +120,7 @@
       height: 404px;
     }
   }
- }
+}
 
 @media #{$desktop-width} {
   .goods-week-card {

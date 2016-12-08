@@ -24,7 +24,7 @@ body {
   background-color: #fff;
 
   /* -------------TEMP BACKGROUNDS------------- */
- /*  background: url('../img/mishka-index-mobile.jpg') no-repeat center top;
+ /*background: url('../img/mishka-index-mobile.jpg') no-repeat center top;
 
   @media #{$tablet-width} {
     background: url('../img/mishka-index-tablet.jpg') no-repeat center top;;
@@ -50,4 +50,18 @@ h1, h2, h3, h4 {
 
 p {
   margin: 0;
+}
+
+@media #{$tablet-width} {
+  h1, h2 {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media #{$tablet-width} {
+  h1, h2 {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
