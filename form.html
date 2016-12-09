@@ -53,6 +53,7 @@
             <fieldset class="order-form__fieldset  order-form__fieldset--type">
               <legend class="order-form__legend">Тип</legend>
 
+              <div class="order-form__labels-wrapper">
                 <label class="order-form__label-radio">
                   <input type="radio" name="type" value="accessory" checked>
                   <span class="order-form__label-text">Аксессуар для интерьера</span>
@@ -62,11 +63,13 @@
                   <input type="radio" name="type" value="toy">
                   <span class="order-form__label-text">Детская игрушка</span>
                 </label>
+              </div>
             </fieldset>
 
             <fieldset class="order-form__fieldset  order-form__fieldset--color">
               <legend class="order-form__legend">Цвет</legend>
 
+              <div class="order-form__labels-wrapper">
                 <label class="order-form__label-checkbox">
                   <input type="checkbox" name="color" value="white" checked>
                   <span class="order-form__label-text">Белый</span>
@@ -96,20 +99,24 @@
                   <input type="checkbox" name="color" value="orange">
                   <span class="order-form__label-text">Оранжевый</span>
                 </label>
+              </div>
             </fieldset>
 
             <fieldset class="order-form__fieldset  order-form__fieldset--name">
               <legend class="order-form__legend">ФИО</legend>
 
-              <label class="order-form__label-text">Имя:
+              <label class="order-form__label-text order-form__label-text--name">
+                <span>Имя:</span>
                 <input type="text" name="first-name" placeholder="Введите ваше имя*" required>
               </label>
 
-              <label class="order-form__label-text">Фамилия:
+              <label class="order-form__label-text order-form__label-text--name">
+                <span>Фамилия:</span>
                 <input type="text" name="last-name" placeholder="Укажите фамилию*" required>
               </label>
 
-              <label class="order-form__label-text">Отчество
+              <label class="order-form__label-text order-form__label-text--name">
+                <span>Отчество</span>
                 <input type="text" name="middle-name" placeholder="Отчество, если желаете">
               </label>
             </fieldset>

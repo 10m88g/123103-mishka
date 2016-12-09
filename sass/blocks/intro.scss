@@ -1,7 +1,20 @@
 .intro {
-
   margin-top: 15px;
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+}
+
+@media #{$tablet-width} {
+  .intro {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media #{$desktop-width} {
+  .intro {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }
