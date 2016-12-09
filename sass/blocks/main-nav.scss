@@ -46,9 +46,16 @@
   }
 
   &__items {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  &__items--delivery,
+  &__items--new-sale {
+    display: none;
   }
 
   &__item {
@@ -78,5 +85,146 @@
     font-size: 17px;
     line-height: 24px;
     font-weight: bold;
+  }
+}
+
+@media #{$tablet-width} {
+  .main-nav {
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; */
+
+    &__toggle {
+      display: none;
+    }
+
+    &__wrapper {
+      display: flex;
+      width: 668px;
+      background-color: transparent;
+    }
+    /* --------TEMP------------- */
+    &--opened .main-nav__wrapper {
+      display: flex;
+    }
+
+    &__items {
+      flex-direction: row;
+    }
+
+    &__items a {
+      margin-top: 10px;
+      padding: 0;
+      border: none;
+    }
+
+    &__items--catalog-form {
+      margin-right: auto;
+
+      & a {
+        font-size: 15px;
+      }
+    }
+
+    &__item--catalog {
+      margin-right: 30px;
+    }
+
+    &__items--delivery {
+      display: flex;
+
+      & a {
+        font-size: 15px;
+        font-weight: normal;
+      }
+    }
+
+    &__items--find-bascket {
+      position: absolute;
+      top: -88px;
+      right: 0;
+      height: 88px;
+      text-align: right;
+    }
+
+    &__items--find-bascket a {
+      margin: 0;
+      padding-top: 35px;
+      padding-bottom: 29px;
+    }
+
+    &__item--find {
+      border-left: 1px solid #ececec;
+
+      & a {
+        //height: 88px;
+        padding-left: 84px;
+        font-size: 0;
+      }
+
+      &:before {
+        left: 32px;
+        top: 35px;
+      }
+    }
+
+    &__item--bascket {
+      position: relative;
+      border-left: 1px solid #ececec;
+
+      & a {
+        //height: 88px;
+        padding-left: 70px;
+
+      }
+
+      &:before {
+        top: 35px;
+        left: 31px;
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .main-nav {
+
+    &__wrapper {
+      width: 1050px;
+    }
+
+    &__items--catalog-form {
+      position: absolute;
+      top: -88px;
+      left: 0;
+      height: 88px;
+      text-align: left;
+
+      & a {
+        margin: 0;
+        padding-right: 30px;
+        padding-top: 35px;
+        padding-bottom: 29px;
+        font-size: 17px;
+      }
+    }
+
+    &__item--catalog {
+      border-right: 1px solid #ececec;
+    }
+
+    &__items--new-sale {
+      display: flex;
+      margin-right: auto;
+
+      & a {
+        font-size: 15px;
+      }
+    }
+
+    &__item--new {
+      margin-right: 50px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .page-header{
-  //position: relative;
+  // position: relative;
   // width: $full-width;
   // margin: $content-margin;
   // padding-top: 20px;
@@ -24,6 +24,10 @@
     &__logo {
       align-self: flex-start;
       margin-left: 50px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      /* position: absolute;
+      left: 50px; */
     }
   }
 }
