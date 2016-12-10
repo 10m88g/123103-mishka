@@ -2,4 +2,12 @@
   position: relative;
   width: $full-width;
   margin: $content-margin;
+
+  @media #{$tablet-width} {
+    width: 768px;
+  }
+
+  @media #{$desktop-width} {
+    width: 1150px;
+  }
 }

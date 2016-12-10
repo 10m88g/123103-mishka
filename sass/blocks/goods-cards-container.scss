@@ -1,4 +1,15 @@
 .goods-cards-container {
-  width: $content-width;
-  margin: $content-margin;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+@media #{$desktop-width} {
+  .goods-cards-container {
+    flex-direction: row;
+
+    &__item {
+      margin-right: 50px;
+    }
+  }
 }

@@ -16,16 +16,20 @@
 
           <nav class="page-header__nav main-nav main-nav--closed">
             <button class="main-nav__toggle" type="button">Открыть меню</button>
+
             <div class="main-nav__wrapper">
-              <ul class="main-nav__items">
-                <li class="main-nav__item">
+
+              <ul class="main-nav__items main-nav__items--catalog-form">
+                <li class="main-nav__item main-nav__item--catalog">
                   <a href="catalog.html">Каталог товаров</a>
                 </li>
 
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--form">
                   <a>Вязание на заказ</a>
                 </li>
+              </ul>
 
+              <ul class="main-nav__items main-nav__items--find-bascket">
                 <li class="main-nav__item main-nav__item--find">
                   <a href="#">Поиск по сайту</a>
                 </li>
@@ -34,6 +38,22 @@
                   <a href="#">Корзина: пока пуста</a>
                 </li>
               </ul>
+
+              <ul class="main-nav__items main-nav__items--new-sale">
+                <li class="main-nav__item main-nav__item--new">
+                  <a href="#">Новые поступления</a>
+                </li>
+                <li class="main-nav__item main-nav__item--sale">
+                  <a href="#">Распродажа</a>
+                </li>
+              </ul>
+
+              <ul class="main-nav__items main-nav__items--delivery">
+                <li class="main-nav__item main-nav__item--delivery">
+                  <a href="#">Бесплатная доставка по России</a>
+                </li>
+              </ul>
+
             </div>
           </nav>
         <!-- </div> -->
@@ -41,7 +61,9 @@
 
 
       <main>
-        <h1 class="page-title page-title--form">Вязание на заказ</h1>
+        <section class="jumbotron jumbotron--form">
+          <h1 class="jumbotron__title jumbotron__title--form">Вязание на заказ</h1>
+        </section>
 
         <div class="content-wrapper">
           <p class="intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -51,6 +73,7 @@
             <fieldset class="order-form__fieldset  order-form__fieldset--type">
               <legend class="order-form__legend">Тип</legend>
 
+              <div class="order-form__labels-wrapper">
                 <label class="order-form__label-radio">
                   <input type="radio" name="type" value="accessory" checked>
                   <span class="order-form__label-text">Аксессуар для интерьера</span>
@@ -60,11 +83,13 @@
                   <input type="radio" name="type" value="toy">
                   <span class="order-form__label-text">Детская игрушка</span>
                 </label>
+              </div>
             </fieldset>
 
             <fieldset class="order-form__fieldset  order-form__fieldset--color">
               <legend class="order-form__legend">Цвет</legend>
 
+              <div class="order-form__labels-wrapper">
                 <label class="order-form__label-checkbox">
                   <input type="checkbox" name="color" value="white" checked>
                   <span class="order-form__label-text">Белый</span>
@@ -94,20 +119,24 @@
                   <input type="checkbox" name="color" value="orange">
                   <span class="order-form__label-text">Оранжевый</span>
                 </label>
+              </div>
             </fieldset>
 
             <fieldset class="order-form__fieldset  order-form__fieldset--name">
               <legend class="order-form__legend">ФИО</legend>
 
-              <label class="order-form__label-text">Имя:
+              <label class="order-form__label-text order-form__label-text--name">
+                <span>Имя:</span>
                 <input type="text" name="first-name" placeholder="Введите ваше имя*" required>
               </label>
 
-              <label class="order-form__label-text">Фамилия:
+              <label class="order-form__label-text order-form__label-text--name">
+                <span>Фамилия:</span>
                 <input type="text" name="last-name" placeholder="Укажите фамилию*" required>
               </label>
 
-              <label class="order-form__label-text">Отчество
+              <label class="order-form__label-text order-form__label-text--name">
+                <span>Отчество</span>
                 <input type="text" name="middle-name" placeholder="Отчество, если желаете">
               </label>
             </fieldset>
@@ -136,7 +165,10 @@
 
 
       <footer class="page-footer">
-        <div class="content-wrapper">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo">
+            <img src="img/logo-mobile.svg" alt="Mishka">
+          </a>
           <div class="page-footer__socials">
             <a href="#" class="page-footer__social-link  page-footer__social-link--insta">Instagram</a>
             <a href="#" class="page-footer__social-link  page-footer__social-link--fb">Facebook</a>

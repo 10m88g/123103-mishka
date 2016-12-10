@@ -1,8 +1,11 @@
 .nav-add {
+  display: flex;
+  flex-wrap: wrap;
 
   &__item {
     position: relative;
-    //width: $full-width;
+    box-sizing: border-box;
+    width: 100%;
     display: block;
 
     /*min-height: 100px;*/
@@ -41,3 +44,12 @@
     }
   }
 }
+  @media #{$tablet-width} {
+    .nav-add {
+      flex-wrap: nowrap;
+    }
+
+    .nav-add__item {
+      width: 50%;
+    }
+  }

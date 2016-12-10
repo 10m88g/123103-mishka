@@ -1,4 +1,18 @@
 $full-width: 320px;
-
 $content-width: 260px;
 $content-margin: 0 auto;
+
+
+@media (min-width: 768px) {
+  $full-width: 768px;
+  $content-width: 668px;
+}
+
+@media (min-width: 1150px) {
+  $full-width: 1150px;
+  $content-width: 1050px;
+}
+
+
+$tablet-width: "(min-width: 768px)";
+$desktop-width: "(min-width: 1150px)";

@@ -26,13 +26,14 @@
   &__label-checkbox {
     display: block;
     margin-top: 40px;
-
     font-weight: bold;
   }
 
+  &__label-text--name span {
+    font-weight: bold;
+  }
 
-
-  &__label-text  input {
+  &__label-text input {
     display: block;
     width: 100%;
     padding: 0;
@@ -42,6 +43,8 @@
     border: none;
     border-bottom: 1px solid #000000;
     outline: none;
+    font-size: 17px;
+    line-height: 18px;
   }
 
   &__fieldset--phone input,
@@ -53,15 +56,21 @@
     padding-bottom: 16px;
     border: none;
     border-bottom: 1px solid #000000;
+    background-color: transparent;
     outline: none;
+    font-size: 17px;
+    line-height: 18px;
   }
 
   &__fieldset--addition textarea {
     box-sizing: border-box;
-    width: $content-width;
+    width: 100%;
     padding: 20px 15px;
     border: 2px solid #444444;
     outline: none;
+    font-size: 17px;
+    line-height: 18px;
+    resize: none;
   }
 
   &__req-text {
@@ -72,5 +81,90 @@
 
   &__submit {
     width: $content-width;
+  }
+}
+
+@media #{$tablet-width} {
+  .order-form {
+    margin-top: 20px;
+
+    &__fieldset {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      padding-top: 25px;
+      padding-left: 167px;
+      padding-bottom: 50px;
+      border: none;
+    }
+
+    &__legend {
+      position: absolute;
+      left: 0;
+      top: 65px;
+    }
+
+    &__labels-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__fieldset--color  &__labels-wrapper{
+      flex-direction: row;
+      flex-wrap: wrap;
+      //justify-content: flex-start;
+    }
+
+    &__label-text--name {
+      display: flex;
+      align-items: baseline;
+    }
+
+    &__label-text--name input {
+      margin-left: 25px;
+    }
+
+
+    &__fieldset--color label {
+      flex-basis: 50%;
+    }
+
+    &__fieldset--color,
+    &__fieldset--phone,
+    &__fieldset--mail {
+      background-color: #f1f1f1;
+    }
+
+    &__fieldset--name,
+    &__fieldset--phone input,
+    &__fieldset--mail input,
+    &__fieldset--addition textarea {
+      font-size: 19px;
+    }
+
+    &__req-text {
+      float: right;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .order-form {
+    &__fieldset {
+      padding-left: 175px;
+      padding-right: 175px;
+    }
+
+    &__fieldset--color label {
+      flex-basis: 33%;
+    }
+
+    &__req-text {
+      margin-right: 175px;
+    }
+
+    &__submit {
+      margin-left: 175px;
+    }
   }
 }

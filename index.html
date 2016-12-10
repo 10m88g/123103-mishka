@@ -11,7 +11,7 @@
     <div class="page-wrapper">
 
     <!-- Модальное окно -->
-      <div class="modal">
+      <div class="modal" hidden>
         <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
 
         <p class="modal__desc">Выберите размер:</p>
@@ -44,19 +44,22 @@
             <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
           </a>
 
-          <nav class="page-header__nav main-nav">
+          <nav class="page-header__nav main-nav main-nav--closed">
             <button class="main-nav__toggle" type="button">Открыть меню</button>
 
             <div class="main-nav__wrapper">
-              <ul class="main-nav__items">
-                <li class="main-nav__item">
+
+              <ul class="main-nav__items main-nav__items--catalog-form">
+                <li class="main-nav__item main-nav__item--catalog">
                   <a href="catalog.html">Каталог товаров</a>
                 </li>
 
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--form">
                   <a href="form.html">Вязание на заказ</a>
                 </li>
+              </ul>
 
+              <ul class="main-nav__items main-nav__items--find-bascket">
                 <li class="main-nav__item main-nav__item--find">
                   <a href="#">Поиск по сайту</a>
                 </li>
@@ -65,6 +68,22 @@
                   <a href="#">Корзина: пока пуста</a>
                 </li>
               </ul>
+
+              <ul class="main-nav__items main-nav__items--new-sale">
+                <li class="main-nav__item main-nav__item--new">
+                  <a href="#">Новые поступления</a>
+                </li>
+                <li class="main-nav__item main-nav__item--sale">
+                  <a href="#">Распродажа</a>
+                </li>
+              </ul>
+
+              <ul class="main-nav__items main-nav__items--delivery">
+                <li class="main-nav__item main-nav__item--delivery">
+                  <a href="#">Бесплатная доставка по России</a>
+                </li>
+              </ul>
+
             </div>
           </nav>
       </header>
@@ -72,12 +91,13 @@
 
       <main>
         <section class="jumbotron">
-          <h1 class="page-title">
-            Милые штуки <br>
+          <h1 class="jumbotron__title">
+            Милые штуки
             ручной<br>
-            работы для дома</h1>
+            работы для дома
+          </h1>
 
-          <nav class="nav-add">
+          <nav class="jumbotron__nav nav-add">
             <a src="#" class="nav-add__item  nav-add__item--lamp">
               <span class="nav-add__item-text">Предметы интерьера</span>
             </a>
@@ -90,60 +110,67 @@
 
         <div class="content-wrapper">
           <article class="goods-week-card">
-            <a title="Вязанная корзинка" src="#">
-              <h2 class="goods-week-card__title">
-                Вязанные корзинки<br>
-                <span class="goods-week-card__title-label">Товар недели</span>
-              </h2>
-            </a>
+            <h2 class="goods-week-card__title">
+              <a href="#" title="Вязанная корзинка" src="#">Вязаные корзинки</a>
+            </h2>
 
-            <p class="goods-week-card__desc">
-              Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.
-            </p>
+            <div class="goods-week-card__title-label">Товар недели</div>
 
-            <dl class="goods-week-card__info">
-              <div class="goods-week-card__info-row">
-                <dt class="goods-week-card__info-name">Цвет:</dt>
-                <dd class="goods-week-card__info-definit">"Тиффани"/серый</dd>
-              </div>
+            <div class="goods-week-card__content">
+              <p class="goods-week-card__desc">
+                Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.
+              </p>
 
-              <div class="goods-week-card__info-row">
-                <dt class="goods-week-card__info-name">Диаметр:</dt>
-                <dd class="goods-week-card__info-definit">25см</dd>
-              </div>
+              <dl class="goods-week-card__info">
+                <div class="goods-week-card__info-row">
+                  <dt class="goods-week-card__info-name">Цвет:</dt>
+                  <dd class="goods-week-card__info-definit">"Тиффани"/серый</dd>
+                </div>
 
-              <div class="goods-week-card__info-row">
-                <dt class="goods-week-card__info-name">Высота:</dt>
-                <dd class="goods-week-card__info-definit">15см</dd>
-              </div>
-            </dl>
+                <div class="goods-week-card__info-row">
+                  <dt class="goods-week-card__info-name">Диаметр:</dt>
+                  <dd class="goods-week-card__info-definit">25см</dd>
+                </div>
 
-            <a href="#" title="Вязанная корзинка">
-              <img class="goods-week-card__picture" src="img/triple-set-mobile@1x.jpg" alt="Вязанная корзинка" width="260" height="315">
-            </a>
+                <div class="goods-week-card__info-row">
+                  <dt class="goods-week-card__info-name">Высота:</dt>
+                  <dd class="goods-week-card__info-definit">15см</dd>
+                </div>
+              </dl>
 
-            <p class="goods-week-card__price">
-              Цена:
-              <span class="goods-week-card__price-value">990 руб.</span>
-            </p>
+              <a class="goods-week-card__picture" href="#" title="Вязанная корзинка">
+                <img src="img/triple-set-mobile@1x.jpg" alt="Вязанная корзинка"> <!-- width="260" height="315" -->
+              </a>
 
-            <a class="goods-week-card__buy btn" href="#" title="Заказать">Заказать</a>
+              <p class="goods-week-card__price">
+                Цена:
+                <span class="goods-week-card__price-value">990 руб.</span>
+              </p>
+
+              <a class="goods-week-card__buy btn" href="#" title="Заказать">Заказать</a>
+            </div>
           </article>
 
           <section class="about-us">
             <h2 class="about-us__header">Коротко о нас</h2>
             <ul class="about-us__fact-list">
               <!-- Иконки в :before -->
-              <li class="about-us__fact  about-us__fact--flower">Экологически чистые материалы</li>
-              <li class="about-us__fact  about-us__fact--brick">Скандинавский стиль по российской цене</li>
-              <li class="about-us__fact  about-us__fact--heart">Увеличивает лайки на фотографиях</li>
-              <li class="about-us__fact  about-us__fact--clew">Связано вручную с любовью и умилением</li>
-              <li class="about-us__fact  about-us__fact--rocket">Поддержка отечественного производителя</li>
-              <li class="about-us__fact  about-us__fact--present">Поставляется в подарочной упаковке</li>
+              <div class="about-us__fact-column">
+                <li class="about-us__fact  about-us__fact--flower">Экологически чистые материалы</li>
+                <li class="about-us__fact  about-us__fact--brick">Скандинавский стиль по российской цене</li>
+                <li class="about-us__fact  about-us__fact--heart">Увеличивает лайки на фотографиях</li>
+              </div>
+              <div class="about-us__fact-column">
+                <li class="about-us__fact  about-us__fact--clew">Связано вручную с любовью и умилением</li>
+                <li class="about-us__fact  about-us__fact--rocket">Поддержка отечественного производителя</li>
+                <li class="about-us__fact  about-us__fact--present">Поставляется в подарочной упаковке</li>
+              </div>
             </ul>
           </section>
+        </div>
 
-          <section class="feedbacks">
+        <section class="feedbacks">
+          <div class="feedbacks__wrapper">
             <h2 class="feedbacks__header">Отзывы</h2>
 
             <blockquote class="feedbacks__item item-feedback">
@@ -152,7 +179,7 @@
               </p>
 
               <footer class="item-feedback__author">
-                <span class="item-feedback__author-name">Анастасия Красильникова</span>
+                <span class="item-feedback__author-name">Анастасия Красильникова</span><br>
                 <cite>
                   <a class="item-feedback__author-twitter" href="#">@misssssiskras</a>
                 </cite>
@@ -170,38 +197,40 @@
             </div>
 
             <a href="#" class="feedbacks__add-btn btn" title="Написать">Написать</a>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="content-wrapper">
+            <h2 class="contacts__header">Контакты</h2>
+
+            <dl class="contacts__list">
+              <div class="contacts__row">
+                <dt class="contacts__key">e-mail:</dt>
+                <dd class="contacts__key-value">
+                  <a href="mailto:info@mimimishkashop.ru" title="Написать">
+                    info@mimimishkashop.ru
+                  </a>
+                </dd>
+              </div>
+
+              <div class="contacts__row">
+                <dt class="contacts__key">адрес:</dt>
+                <dd class="contacts__key-value">
+                  г. Санкт-Петербург,<br>
+                  ул. Большая
+                  Конюшенная,<br>
+                  д. 19/8, офис 101
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <section class="contacts__map">
+            <img src="img/map-mobile@1x.jpg" alt="map"> <!-- width="320" height="457" -->
           </section>
 
-          <section class="contacts">
-          <h2 class="contacts__header">Контакты</h2>
-
-          <dl>
-            <div class="contacts__row">
-              <dt class="contacts__key">e-mail:</dt>
-              <dd class="contacts__key-value">
-                <a href="mailto:info@mimimishkashop.ru" title="Написать">
-                  info@mimimishkashop.ru
-                </a>
-              </dd>
-            </div>
-
-            <div class="contacts__row">
-              <dt class="contacts__key">адрес:</dt>
-              <dd class="contacts__key-value">
-                г. Санкт-Петербург,
-                ул. Большая
-                Конюшенная,
-                д. 19/8, офис 101
-              </dd>
-            </div>
-          </dl>
-          </section>
-        </div>
-
-        <section class="map">
-          <img src="img/map-mobile@1x.jpg" alt="map" width="320" height="457">
-
-          <div class="map__mailus  btn">
+          <div class="contacts__mailus  btn">
             <a href="mailto:htmla@mail.ru">Напишите нам</a>
           </div>
         </section>
@@ -209,7 +238,10 @@
 
 
       <footer class="page-footer">
-        <div class="content-wrapper">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo">
+            <img src="img/logo-mobile.svg" alt="Mishka">
+          </a>
           <div class="page-footer__socials">
             <a href="#" class="page-footer__social-link  page-footer__social-link--insta">Instagram</a>
             <a href="#" class="page-footer__social-link  page-footer__social-link--fb">Facebook</a>

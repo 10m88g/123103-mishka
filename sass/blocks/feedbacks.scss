@@ -1,5 +1,8 @@
 .feedbacks {
-
+  &__wrapper {
+    width: $content-width;
+    margin: $content-margin;
+  }
   &__header {
     margin-top: 50px;
     font-size: 25px;
@@ -39,5 +42,53 @@
   &__add-btn {
     margin-top: 38px;
     margin-bottom: 48px;
+  }
+}
+
+@media #{$tablet-width} {
+  .feedbacks {
+    background:  url('../img/review@1x.jpg') no-repeat left top;
+    &__wrapper {
+      position: relative;
+      width: 668px;
+    }
+
+    &__header {
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &__control {
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      width: 140px;
+
+      &-btn {
+        border: none;
+      }
+
+    }
+
+    &__add-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0;
+      width: 170px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .feedbacks {
+    background: none;
+
+    &__wrapper {
+      width: 1050px;
+      box-sizing: border-box;
+      padding-left: 170px;
+      background:  url('../img/review@1x.jpg') no-repeat left top;
+    }
   }
 }
