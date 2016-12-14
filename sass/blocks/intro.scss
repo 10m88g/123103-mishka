@@ -1,5 +1,7 @@
 .intro {
-  margin-top: 15px;
+  width: $content-width;
+  margin: $content-margin;
+  margin-top: 18px;
   font-size: 13px;
   line-height: 24px;
   color: #444444;
@@ -7,6 +9,8 @@
 
 @media #{$tablet-width} {
   .intro {
+    width: 668px;
+    margin-top: 72px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -14,7 +18,9 @@
 
 @media #{$desktop-width} {
   .intro {
-    padding-left: 175px;
-    padding-right: 175px;
+    width: 700px;
+    margin-top: 143px;
+    margin-left: 225px;
+    margin-right: 225px;
   }
 }
