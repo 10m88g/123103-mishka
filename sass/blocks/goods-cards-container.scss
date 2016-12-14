@@ -1,12 +1,19 @@
 .goods-cards-container {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 25px;
+}
+
+@media #{$tablet-width} {
+  .goods-cards-container {
+    margin-top: 79px;
+  }
 }
 
 @media #{$desktop-width} {
   .goods-cards-container {
     flex-direction: row;
+    margin-top: 150px;
 
     &__item {
       margin-right: 50px;

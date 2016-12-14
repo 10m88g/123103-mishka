@@ -34,8 +34,15 @@ body {
     background: url('../img/mishka-index-desktop.jpg') no-repeat center top;;
   } */
   /* ---------------CATALOG-------------------------- */
-  /* background: url('../img/mishka-catalog-mobile.jpg') no-repeat center top; */
+  /* background: url('../img/mishka-catalog-mobile.jpg') no-repeat center top;
 
+  @media #{$tablet-width} {
+    background: url('../img/mishka-catalog-tablet.jpg') no-repeat center top;;
+  }
+
+  @media #{$desktop-width} {
+    background: url('../img/mishka-catalog-desktop.jpg') no-repeat center top;;
+  } */
 }
 
 a,

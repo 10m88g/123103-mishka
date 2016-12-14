@@ -1,18 +1,26 @@
 .goods-card {
-  dispaly: flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 30px;
   border: 1px solid #ededed;
 
+  &__picture,
+  &__picture img {
+    width: 260px;
+    height: 195px;
+  }
+
   &__title {
-    margin-top: 20px;
+    margin:0;
+    margin-top: 23px;
     margin-left: 29px;
     font-size: 17px;
     line-height: 24px;
     font-weight: bold;
   }
 
-  &__decs {
+  &__desc {
+    margin:0;
     margin-left: 29px;
     font-size: 13px;
     line-height: 30px;
@@ -20,8 +28,9 @@
   }
 
   &__price {
-    margin-left: 27px;
-    margin-right: 27px;
+    display: flex;
+    justify-content: space-between;
+    margin: 27px;
     padding-top: 15px;
     border-top: 1px solid #ececec;
     font-size: 15px;
@@ -30,7 +39,7 @@
   }
 
   &__order-btn {
-    float: right;
+    //float: right;
     font-size: 0;
 
     &:before {
@@ -41,45 +50,72 @@
 
 @media #{$tablet-width} {
   .goods-card {
+    flex-direction: row;
+    margin-bottom: 54px;
+
     &__picture {
-      float: left;
+      // flex-basis: 100%;
       margin-right: 25px;
     }
 
     &__picture,
     &__picture img {
       width: 334px;
-      height: 335px;
+      height: 332px;
     }
 
     &__column {
-      margin-left: 360px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     &__title {
       font-size: 20px;
+      margin-top: 25px;
+      margin-right: 65px;
+      margin-left: 0;
+    }
+
+    &__desc {
+      margin-top: 5px;
+      margin-left: 0;
+      font-size: 15px;
     }
 
     &__price {
-      margin-top: 170px;
+      margin-top: auto;
+      margin-left: 5px;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      font-size: 17px;
     }
   }
 }
 
 @media #{$desktop-width} {
   .goods-card {
-    &__picture {
-      float: none;
+    flex-direction: column;
+
+    &__picture,
+    &__picture img {
+      width: 315px;
+      height: 463px;
       margin-right: 0;
     }
 
 
     &__column {
-      margin-left: 0;
+      margin-left: 25px;
+    }
+
+    &__title {
+      margin-right: 50px;
     }
 
     &__price {
-      margin-top: 0;
+      margin-bottom: 18px;
+      padding-top: 36px;
     }
   }
 }
