@@ -14,10 +14,11 @@
 @media #{$desktop-width} {
   .goods-cards-container {
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 150px;
 
     &__item {
-      margin-right: 50px;
+      //margin-right: 50px;
     }
   }
 }

@@ -40,7 +40,11 @@
       <header class="page-header">
         <!-- <div class="content-wrapper"> -->
           <a href="index.html" class="page-header__logo">
-            <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+            </picture>
           </a>
 
           <nav class="page-header__nav main-nav main-nav--closed">
@@ -98,7 +102,13 @@
           <section class="goods-cards-container">
             <article class="goods-cards-container__item goods-card">
               <a href="#" class="goods-card__picture" title="Зайчик-попрыгайчик">
-                <img src="img/photo-1-mobile@1x.jpg" alt="Зайчик" width="260" height="195">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+
+                  <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Корзинка для белья" width="260" height="195">
+                </picture>
               </a>
 
               <div class="goods-card__column">
@@ -121,7 +131,13 @@
 
             <article class="goods-cards-container__item goods-card">
               <a class="goods-card__picture" href="#" title="Корзинка для белья">
-                <img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+
+                  <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" width="260" height="195">
+                </picture>
               </a>
 
               <div class="goods-card__column">
@@ -144,7 +160,13 @@
 
             <article class="goods-cards-container__item goods-card">
               <a class="goods-card__picture" href="#" title="Большая корзинка">
-                <img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка" width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+
+                <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Корзинка для белья" width="260" height="195">
+              </picture>
               </a>
 
               <div class="goods-card__column">
@@ -170,7 +192,14 @@
               <h2 class="process-card__title">Процесс производства</h2>
 
               <div class="process-card__video-wrapper">
-                <img src="img/video-mobile@1x.jpg" class="process-card__video" width="260" height="150" alt="video">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+
+                  <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                </picture>
+
                 <button type="button" class="process-card__video-btn">
                   <img src="img/icon-play.svg" alt="Play">
                 </button>

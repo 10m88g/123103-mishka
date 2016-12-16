@@ -95,6 +95,7 @@
 
 @media #{$desktop-width} {
   .goods-card {
+    flex-basis: 314px;
     flex-direction: column;
 
     &__picture,
