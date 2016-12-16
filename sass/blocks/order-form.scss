@@ -1,4 +1,6 @@
 .order-form {
+  width: $content-width;
+  margin: $content-margin;
   margin-bottom: 55px;
   font-size: 17px;
   line-height: 18px;
@@ -9,25 +11,50 @@
     padding-right: 30px;
     font-size: 17px;
     line-height: 16px;
+    font-weight: bold;
     text-transform: uppercase;
     color: #63d1bb;
   }
 
   &__fieldset {
     margin: 0;
-    margin-top: 40px;
+    margin-top: 24px;
+    //margin-bottom: 40px;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 5px;
+    /* padding-left: 30px;
+    padding-right: 30px; */
     border: none;
     border-top: 1px solid #62d1ba;
+  }
+
+  &__fieldset--color {
+    margin-top: 40px;
   }
 
   &__label-radio,
   &__label-checkbox {
     display: block;
-    margin-top: 40px;
+    padding-left: 60px;
+    margin-top: 30px;
     font-weight: bold;
   }
+
+  &__label-checkbox {
+    margin-top: 40px;
+  }
+
+  &__label-radio input,
+  &__label-checkbox input {
+    display: none;
+  }
+
+  &__fieldset--name {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    padding-top: 35px;
+  }
+
 
   &__label-text--name span {
     font-weight: bold;
@@ -51,20 +78,33 @@
   &__fieldset--mail input{
     display: block;
     width: 100%;
+    margin-top: 20px;
     padding: 0;
     // padding-right: 40px;
     padding-bottom: 16px;
     border: none;
-    border-bottom: 1px solid #000000;
+    border-bottom: 2px solid #000000;
     background-color: transparent;
     outline: none;
     font-size: 17px;
     line-height: 18px;
   }
 
+  &__fieldset--phone {
+    margin-top: 15px;
+  }
+
+  &__fieldset--mail {
+    margin-top: 30px;
+  }
+  &__fieldset--addition {
+    margin-top: 32px;
+  }
+
   &__fieldset--addition textarea {
     box-sizing: border-box;
     width: 100%;
+    margin-top: 20px;
     padding: 20px 15px;
     border: 2px solid #444444;
     outline: none;
@@ -74,34 +114,58 @@
   }
 
   &__req-text {
+    margin-top: 5px;
     font-size: 14px;
     line-height: 16px;
     color: #444444;
   }
 
   &__submit {
+    margin-top: 30px;
     width: $content-width;
   }
 }
 
 @media #{$tablet-width} {
   .order-form {
+    width: 768px;
     margin-top: 20px;
 
     &__fieldset {
       position: relative;
       margin: 0;
       padding: 0;
-      padding-top: 25px;
-      padding-left: 167px;
+      padding-left: 217px;
       padding-bottom: 50px;
+      padding-right: 50px;
       border: none;
+      // TEMP
+      // outline: 1px solid red;
+    }
+
+    &__fieldset label {
+      margin-top: 55px;
+      padding-left: 80px;
+      font-size: 19px;
     }
 
     &__legend {
       position: absolute;
-      left: 0;
+      left: 50px;
+      top: 55px;
+    }
+
+    &__fieldset--color {
+      margin-top: 20px;
+      padding-bottom: 65px;
+    }
+
+    &__fieldset--color legend {
       top: 65px;
+    }
+
+    &__fieldset--color label {
+      margin-top: 62px;
     }
 
     &__labels-wrapper {
@@ -112,26 +176,56 @@
     &__fieldset--color  &__labels-wrapper{
       flex-direction: row;
       flex-wrap: wrap;
-      //justify-content: flex-start;
+      justify-content: flex-start;
     }
 
-    &__label-text--name {
+    &__fieldset--color label {
+      box-sizing: border-box;
+      flex-basis: 50%;
+    }
+
+    &__fieldset--name {
+      margin-top: 35px;
+      //padding-left: 162px;
+      //padding-right: 50px;
+      padding-bottom: 0;
+    }
+
+    &__fieldset--name label {
       display: flex;
       align-items: baseline;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    &__fieldset--name legend {
+      top: 30px;
     }
 
     &__label-text--name input {
       margin-left: 25px;
     }
 
-
-    &__fieldset--color label {
-      flex-basis: 50%;
+    &__fieldset--phone {
+      margin-top: 30px;
+      padding-top: 40px;
+      padding-bottom: 20px;
     }
+
+    &__fieldset--phone legend {
+      top: 65px;
+    }
+
+    &__fieldset--mail legend {
+      top: 25px;
+    }
+
 
     &__fieldset--color,
     &__fieldset--phone,
     &__fieldset--mail {
+      padding-right: 50px;
+
       background-color: #f1f1f1;
     }
 
@@ -142,29 +236,62 @@
       font-size: 19px;
     }
 
+    &__fieldset--addition {
+      margin-top: 20px;
+    }
+
+    &__fieldset--addition legend {
+      top: 45px;
+    }
+
+    &__submit {
+      width: 230px;
+      margin-top: 0;
+      margin-left: 50px;
+    }
+
     &__req-text {
       float: right;
+      margin-top: 10px;
+      margin-right: 50px;
+      font-size: 17px;
+      line-height: 30px;
     }
   }
 }
 
 @media #{$desktop-width} {
   .order-form {
+    width: 1150px;
+
     &__fieldset {
-      padding-left: 175px;
-      padding-right: 175px;
+      padding-left: 225px;
+      padding-right: 225px;
     }
+
+    &__fieldset legend {
+      left: 115px;
+    }
+
+    &__fieldset--color {
+      padding-right: 125px;
+    }
+
 
     &__fieldset--color label {
       flex-basis: 33%;
     }
 
+    &__fieldset--addition {
+      margin-top: 25px;
+    }
+
     &__req-text {
-      margin-right: 175px;
+      margin-right: 225px;
     }
 
     &__submit {
-      margin-left: 175px;
+      margin-left: 225px;
     }
   }
 }

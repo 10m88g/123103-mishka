@@ -1,10 +1,12 @@
 .feedbacks {
+  border-top: 1px solid #fff;
+
   &__wrapper {
     width: $content-width;
     margin: $content-margin;
   }
   &__header {
-    margin-top: 50px;
+    margin-top: 57px;
     font-size: 25px;
     line-height: 30px;
     font-weight: bold;
@@ -47,22 +49,27 @@
 
 @media #{$tablet-width} {
   .feedbacks {
+    margin-top: 78px;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
     background:  url('../img/review@1x.jpg') no-repeat left top;
+
     &__wrapper {
       position: relative;
       width: 668px;
     }
 
     &__header {
+      margin-top: 76px;
       font-size: 43px;
       line-height: 50px;
     }
 
     &__control {
       position: absolute;
-      right: 10px;
+      right: 0;
       bottom: 0;
-      width: 140px;
+      width: 175px;
 
       &-btn {
         border: none;
@@ -73,7 +80,7 @@
     &__add-btn {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 5px;
       margin: 0;
       width: 170px;
     }
@@ -83,12 +90,29 @@
 @media #{$desktop-width} {
   .feedbacks {
     background: none;
+    margin-bottom: 60px;
 
     &__wrapper {
       width: 1050px;
       box-sizing: border-box;
       padding-left: 170px;
+      padding-top: 75px;
+      padding-bottom: 65px;
       background:  url('../img/review@1x.jpg') no-repeat left top;
+    }
+
+    &__header {
+      margin-top: 0;
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__add-btn {
+      top: 85px;
+    }
+
+    &__control {
+      bottom: 98px;
     }
   }
 }

@@ -10,32 +10,35 @@
 
   &__title {
     flex-basis: 100%;
-    // order: 0;
-    margin-top: 22px;
-    margin-bottom: 20px;
+    margin-top: 28px;
     font-size: 25px;
     line-height: 30px;
     font-weight: bold;
+    color: #000;
     text-align: left;
     cursor: pointer;
   }
 
 
   &__title-label {
+    margin-top: 7px;
     font-size: 17px;
     line-height: 16px;
+    font-weight: bold;
     color: #63d1bb;
     text-transform: uppercase;
   }
 
 
   &__desc {
-    flex-basis: 100%;
+    margin-top: 25px;
     font-size: 15px;
     line-height: 24px;
   }
 
   &__info {
+    margin: 0;
+    margin-top: 26px;
     margin-bottom: 29px;
     font-size: 15px;
     line-height: 20px;
@@ -51,7 +54,7 @@
     }
 
     &-row {
-      margin-top: 5px;
+      margin-top: 9px;
       padding-bottom: 10px;
       border-bottom: 1px solid #ececec;
     }
@@ -72,11 +75,16 @@
   }
 
   &__price {
-    flex-basis: 100%;
+    //flex-basis: 100%;
+    margin-top: 19px;
     font-size: 17px;
     line-height: 24px;
     font-weight: bold;
     text-align: center;
+  }
+
+  &__buy {
+    margin-top: 27px;
   }
 
 }
@@ -85,9 +93,11 @@
   .goods-week-card {
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 70px;
 
     &__title {
       flex-basis: 75%;
+      margin-top: 43px;
       font-size: 43px;
       line-height: 50px;
       align-self: center;
@@ -95,6 +105,8 @@
 
     &__title-label {
       flex-basis: 75px;
+      margin-top: 45px;
+      margin-right: 25px;
       align-self: center;
       text-align: center;
     }
@@ -103,11 +115,22 @@
       position: relative;
       height: 400px;
       margin: $content-margin;
-      padding-right: 370px;
+      margin-top: 50px;
+      padding-right: 378px;
 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      //justify-content: space-between;
+    }
+
+    &__desc {
+      margin-top: 0;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__info {
+      margin-top: 34px;
     }
 
     &__picture {
@@ -117,20 +140,35 @@
     }
     &__picture img {
       width: 334px;
-      height: 404px;
+      height: 405px;
+    }
+
+    &__price {
+      margin-top: 27px;
+      font-size: 20px;
+    }
+
+    &__buy {
+      margin-top: 36px;
     }
   }
 }
 
 @media #{$desktop-width} {
   .goods-week-card {
+    margin-bottom: 0;
+
     &__title {
+      margin-top: 120px;
+      flex-basis: 84%;
       font-size: 53px;
       line-height: 57px;
     }
 
     &__title-label {
       order: -1;
+      margin-top: 128px;
+      margin-left: 45px;
     }
 
     &__desc {
@@ -139,20 +177,28 @@
     }
 
     &__content {
-      padding-left: 175px;
-      padding-right: 580px;
+      padding-left: 173px;
+      padding-right: 586px;
       height: 566px;
+    }
+
+    &__info {
+      margin-top: 48px;
     }
 
 
     &__picture {
-      top: -70px;
+      top: -160px;
       z-index: -1;
     }
 
     &__picture img {
       width: 525px;
       height: 636px;
+    }
+
+    &__price {
+      margin-top: 80px;
     }
   }
 }

@@ -1,7 +1,8 @@
 .about-us {
+  border-top: 1px solid #fff;
 
   &__header {
-    margin-top: 30px;
+    margin-top: 19px;
     font-size: 25px;
     line-height: 30px;
     font-weight: bold;
@@ -9,18 +10,20 @@
   }
 
   &__fact-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__fact-column {
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  &__fact-column {
-    width: 100%;
-  }
-
   &__fact {
     position: relative;
-    width: 250px;
+    //width: 250px;
     padding-top: 83px;
     font-size: 17px;
     line-height: 20px;
@@ -29,51 +32,89 @@
 
   &__fact:before {
     position: absolute;
-    top: 25px;
+    top: 30px;
     left: 0;
     color: #63d1bb;
   }
 
   &__fact--flower:before {
-    content: url("../img/icon-feature-1.svg");
+    content: url("../img/icon-feature-flower.svg");
   }
 
   &__fact--brick:before {
-    content: url("../img/icon-feature-2.svg");
+    content: url("../img/icon-feature-brick.svg");
   }
 
   &__fact--heart:before {
-    content: url("../img/icon-feature-3.svg");
+    content: url("../img/icon-feature-heart.svg");
   }
 
   &__fact--clew:before {
-    content: url("../img/icon-feature-4.svg");
+    content: url("../img/icon-feature-clew.svg");
   }
 
   &__fact--rocket:before {
-    content: url("../img/icon-feature-5.svg");
+    content: url("../img/icon-feature-rocket.svg");
   }
 
   &__fact--present:before {
-    content: url("../img/icon-feature-6.svg");
+    content: url("../img/icon-feature-present.svg");
   }
 }
+
+
 @media #{$tablet-width} {
-  .about-us__fact-list:after {
-    content: '';
-    display: table;
-    clear: both;
+  .about-us {
+    &__header {
+      margin-top: 48px;
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &__fact-column {
+      width: 50%;
+    }
+
+    &__fact-list {
+      flex-direction: row;
+    }
+
+    /* &__fact-list:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    &__fact-column {
+      width: 49.9%;
+      float: left;
+    } */
+
+    &__fact {
+      padding-top: 100px;
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    &__fact:before {
+      top: 50px;
+    }
   }
 
-  .about-us__fact-column {
-    width: 49.9%;
-    float: left;
-  }
 }
 
 @media #{$desktop-width} {
   .about-us {
     box-sizing: border-box;
     padding-left: 170px;
+
+    &__header {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__fact-column {
+      width: 40%;
+    }
   }
 }

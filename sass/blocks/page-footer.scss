@@ -1,6 +1,7 @@
 .page-footer {
+  margin-top: 5px;
   padding-top: 20px;
-  // border-top: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
   // border-bottom: 1px solid #f1f1f1;
   background-color: #f1f1f1;
 
@@ -25,9 +26,9 @@
 
   &__social-link {
     display: inline-block;
-    vertical-align: bottom;
-    height: 30px;
-    width: 30px;
+    vertical-align: middle;
+    //height: 30px;
+    width: 23px;
     margin-left: 20px;
     margin-right: 20px;
 
@@ -37,6 +38,7 @@
 
     &--fb:before {
       content: url("../img/icon-fb.svg");
+      height: 28px;
     }
 
     &--twitter:before {
@@ -56,6 +58,8 @@
     &-logo {
       display: inline-block;
       padding: 10px;
+      padding-top: 15px;
+      padding-left: 20px;
       vertical-align: middle;
       font-size: 0;
     }
@@ -72,6 +76,7 @@
       width: 668px;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     &__logo {
