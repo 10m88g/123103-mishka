@@ -47,6 +47,7 @@
   .jumbotron {
     /* min-height: 745px; */
     width: 768px;
+    position: relative;
     background-image: url('../img/hero-desktop@1x.jpg');
 
     @media #{$retina} {
@@ -79,6 +80,17 @@
       margin-right: 50px;
       margin-left: 50px;
     }
+  }
+
+  .jumbotron:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    width: 100%;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: cover;/* contain */
   }
 }
 
