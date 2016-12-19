@@ -13,7 +13,7 @@
     "@htmlacademy/editorconfig-cli": "0.1.x"
   },
   "scripts": {
-    "test": "editorconfig-cli",
+    "test": "editorconfig-cli -v",
     "build": "gulp style",
     "start": "gulp serve"
   },
