@@ -18,6 +18,7 @@
     cursor: pointer;
   }
 
+
   &__toggle:focus {
     outline: none;
   }
@@ -39,10 +40,6 @@
     right: 0;
     background-color: #fff;
     z-index: 2;
-  }
-
-  &--opened .main-nav__wrapper {
-    display: block;
   }
 
   &__items {
@@ -88,6 +85,23 @@
   }
 }
 
+@media #{$mobile-width-only} {
+  .main-nav {
+    /* Откл js  */
+    &--no-js &__toggle {
+      display: none;
+    }
+
+    &--no-js &__wrapper {
+      position: relative;
+    }
+
+    &--opened &__wrapper {
+      display: block;
+    }
+}
+}
+
 @media #{$tablet-width} {
   .main-nav {
     /* position: absolute;
@@ -105,9 +119,9 @@
       background-color: transparent;
     }
     /* --------TEMP------------- */
-    &--opened .main-nav__wrapper {
+    /* &--opened .main-nav__wrapper {
       display: flex;
-    }
+    } */
 
     &__items {
       flex-direction: row;

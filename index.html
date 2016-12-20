@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Главная</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -12,39 +13,46 @@
 
     <!-- Модальное окно -->
       <div class="modal" hidden>
-        <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
+      <div class="modal__wrapper">
+          <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
 
-        <p class="modal__desc">Выберите размер:</p>
+          <p class="modal__desc">Выберите размер:</p>
 
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="modal__btn-block">
-            <input type="radio" class="modal__input-radio" id="size-S" name="size" value="S" checked>
-            <label for="size-S" class="modal__label-radio">
-              S
-            </label>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal__btn-block">
+              <input type="radio" class="modal__input-radio" id="size-S" name="size" value="S" checked>
+              <label for="size-S" class="modal__label-radio">
+                S
+              </label>
 
-            <input class="modal__input-radio" id="size-M" type="radio" name="size" value="M">
-            <label class="modal__label-radio" for="size-M">
-              M
-            </label>
+              <input class="modal__input-radio" id="size-M" type="radio" name="size" value="M">
+              <label class="modal__label-radio" for="size-M">
+                M
+              </label>
 
-            <input class="modal__input-radio" id="size-L" type="radio" name="size" value="L">
-            <label class="modal__label-radio" for="size-L">
-              L
-            </label>
+              <input class="modal__input-radio" id="size-L" type="radio" name="size" value="L">
+              <label class="modal__label-radio" for="size-L">
+                L
+              </label>
 
-          </div>
-          <button type="submit" class="modal__btn-submit">Добавить</button>
-        </form>
+            </div>
+            <button type="submit" class="modal__btn-submit">Добавить</button>
+          </form>
+        </div>
       </div>
 
 
       <header class="page-header">
           <a class="page-header__logo">
-            <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+            </picture>
           </a>
 
-          <nav class="page-header__nav main-nav main-nav--closed">
+          <!-- При откл js, на мобильной версии, меню открыто, и в потоке -->
+          <nav class="page-header__nav main-nav main-nav--opened main-nav--no-js">
             <button class="main-nav__toggle" type="button">Открыть меню</button>
 
             <div class="main-nav__wrapper">
@@ -108,7 +116,7 @@
           </nav>
         </section>
 
-        <div class="content-wrapper">
+        <!-- <div class="content-wrapper"> -->
           <article class="goods-week-card">
             <h2 class="goods-week-card__title">
               <a href="#" title="Вязанная корзинка">Вязаные корзинки</a>
@@ -139,7 +147,13 @@
               </dl>
 
               <a class="goods-week-card__picture" href="#" title="Вязанная корзинка">
-                <img src="img/triple-set-mobile@1x.jpg" alt="Вязанная корзинка"> <!-- width="260" height="315" -->
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+
+                  <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанная корзинка"> <!-- width="260" height="315" -->
+                </picture>
               </a>
 
               <p class="goods-week-card__price">
@@ -150,11 +164,10 @@
               <a class="goods-week-card__buy btn" href="#" title="Заказать">Заказать</a>
             </div>
           </article>
-          <hr class="wave__divider">
+          <hr class="wave-divider">
           <section class="about-us">
             <h2 class="about-us__header">Коротко о нас</h2>
             <div class="about-us__fact-list">
-              <!-- Иконки в :before -->
               <ul class="about-us__fact-column">
                 <li class="about-us__fact  about-us__fact--flower">Экологически<br>
                 чистые материалы</li>
@@ -173,7 +186,7 @@
               </ul>
             </div>
           </section>
-        </div>
+        <!-- </div> -->
 
         <section class="feedbacks">
           <div class="feedbacks__wrapper">
@@ -206,7 +219,7 @@
           </div>
         </section>
 
-        <hr class="wave__divider">
+        <hr class="wave-divider">
 
         <section class="contacts">
           <div class="content-wrapper">
@@ -235,7 +248,13 @@
           </div>
 
           <section class="contacts__map">
-            <img src="img/map-mobile@1x.jpg" alt="map"> <!-- width="320" height="457" -->
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+
+              <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="map"> <!-- width="320" height="457" -->
+            </picture>
           </section>
 
           <div class="contacts__mailus  btn">
@@ -248,7 +267,7 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo">
-            <img src="img/logo-mobile.svg" alt="Mishka">
+            <img src="img/logo-footer.svg" alt="Mishka">
           </a>
 
           <div class="page-footer__socials">

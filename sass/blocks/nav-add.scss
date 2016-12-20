@@ -17,8 +17,11 @@
     font-size: 19px;
     line-height: 24px;
     font-weight: bold;
-    color: #ffffff;
     cursor: pointer;
+
+    &-text {
+      color: #ffffff;
+    }
 
     &--lamp {
       background-color: #63d1bb;

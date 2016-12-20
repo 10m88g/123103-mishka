@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Форма заказа</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
@@ -11,10 +12,14 @@
       <header class="page-header">
         <!-- <div class="content-wrapper"> -->
           <a href="index.html" class="page-header__logo">
-            <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+            </picture>
           </a>
 
-          <nav class="page-header__nav main-nav main-nav--closed">
+          <nav class="page-header__nav main-nav main-nav--opened main-nav--no-js">
             <button class="main-nav__toggle" type="button">Открыть меню</button>
 
             <div class="main-nav__wrapper">
@@ -74,13 +79,13 @@
               <legend class="order-form__legend">Тип</legend>
 
               <div class="order-form__labels-wrapper">
-                <label class="order-form__label-radio">
-                  <input type="radio" name="type" value="accessory" checked>
+                <input type="radio" class="order-form__input-radio" id="type-accessory" name="type" value="accessory" checked>
+                <label class="order-form__label-radio" for="type-accessory">
                   <span class="order-form__label-text">Аксессуар для интерьера</span>
                 </label>
 
-                <label class="order-form__label-radio">
-                  <input type="radio" name="type" value="toy">
+                <input type="radio" class="order-form__input-radio" id="type-toy" name="type" value="toy">
+                <label class="order-form__label-radio" for="type-toy">
                   <span class="order-form__label-text">Детская игрушка</span>
                 </label>
               </div>
@@ -90,33 +95,34 @@
               <legend class="order-form__legend">Цвет</legend>
 
               <div class="order-form__labels-wrapper">
-                <label class="order-form__label-checkbox">
-                  <input type="checkbox" name="color" value="white" checked>
+
+                <input type="checkbox" class="order-form__input-checkbox" id="color-white" name="color" value="white" checked>
+                <label class="order-form__label-checkbox" for="color-white">
                   <span class="order-form__label-text">Белый</span>
                 </label>
 
-                <label class="order-form__label-checkbox">
-                  <input type="checkbox" name="color" value="gray" checked>
+                <input type="checkbox" class="order-form__input-checkbox" id="color-gray" name="color" value="gray" checked>
+                <label class="order-form__label-checkbox" for="color-gray">
                   <span class="order-form__label-text">Серый</span>
                 </label>
 
-                <label class="order-form__label-checkbox">
-                  <input type="checkbox" name="color" value="tiffany">
+                <input type="checkbox" class="order-form__input-checkbox" id="color-tiffany" name="color" value="tiffany">
+                <label class="order-form__label-checkbox" for="color-tiffany">
                   <span class="order-form__label-text">«Тиффани»</span>
                 </label>
 
-                <label class="order-form__label-checkbox">
-                  <input type="checkbox" name="color" value="black">
+                <input type="checkbox" class="order-form__input-checkbox" id="color-black" name="color" value="black">
+                <label class="order-form__label-checkbox" for="color-black">
                   <span class="order-form__label-text">Черный</span>
                 </label>
 
-                <label class="order-form__label-checkbox">
-                  <input type="checkbox" name="color" value="pink">
+                <input type="checkbox" class="order-form__input-checkbox" id="color-pink" name="color" value="pink">
+                <label class="order-form__label-checkbox" for="color-pink">
                   <span class="order-form__label-text">Розовый</span>
                 </label>
 
-                <label class="order-form__label-checkbox">
-                  <input type="checkbox" name="color" value="orange">
+                <input type="checkbox" class="order-form__input-checkbox" id="color-orange" name="color" value="orange">
+                <label class="order-form__label-checkbox" for="color-orange">
                   <span class="order-form__label-text">Оранжевый</span>
                 </label>
               </div>
@@ -167,7 +173,7 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a href="index.html" class="page-footer__logo">
-            <img src="img/logo-mobile.svg" alt="Mishka">
+            <img src="img/logo-footer.svg" alt="Mishka">
           </a>
 
           <div class="page-footer__socials">

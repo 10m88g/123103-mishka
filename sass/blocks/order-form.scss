@@ -34,6 +34,7 @@
 
   &__label-radio,
   &__label-checkbox {
+    position: relative;
     display: block;
     padding-left: 60px;
     margin-top: 30px;
@@ -44,9 +45,52 @@
     margin-top: 40px;
   }
 
-  &__label-radio input,
-  &__label-checkbox input {
+  &__input-radio,
+  &__input-checkbox {
     display: none;
+  }
+
+  &__label-radio:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    /* padding-left: 12px;
+    padding-top: 12px; */
+    border: 2px solid #444;
+    border-radius: 20px;
+/*     width: 52px;
+    height: 52px;
+    padding-left: 14px;
+    padding-top: 14px;
+    border: 2px solid #444;
+    border-radius: 25px; */
+  }
+
+  &__input-radio:checked +&__label-radio:before {
+    background-image: url("../img/icon-round.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__label-checkbox:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    box-sizing: border-box;
+    width: 39px;
+    height: 40px;
+    border: 2px solid #444;
+  }
+
+  &__input-checkbox:checked +&__label-checkbox:before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   &__fieldset--name {
@@ -80,7 +124,6 @@
     width: 100%;
     margin-top: 20px;
     padding: 0;
-    // padding-right: 40px;
     padding-bottom: 16px;
     border: none;
     border-bottom: 2px solid #000000;
@@ -139,8 +182,6 @@
       padding-bottom: 50px;
       padding-right: 50px;
       border: none;
-      // TEMP
-      // outline: 1px solid red;
     }
 
     &__fieldset label {
@@ -153,6 +194,33 @@
       position: absolute;
       left: 50px;
       top: 55px;
+    }
+
+    &__label-radio:before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      box-sizing: border-box;
+      width: 52px;
+      height: 52px;
+      border: 2px solid #444;
+      border-radius: 26px;
+    }
+
+    &__input-radio:checked + &__label-radio:before {
+      background-size: 22px 22px;
+    }
+
+    &__label-checkbox:before {
+      top: -14px;
+      left: 0;
+      box-sizing: border-box;
+      width: 54px;
+      height: 52px;
+    }
+
+    &__input-checkbox:checked +&__label-checkbox:before {
+      background-size: 32px 22px;
     }
 
     &__fieldset--color {

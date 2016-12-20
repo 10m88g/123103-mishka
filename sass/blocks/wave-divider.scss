@@ -1,0 +1,13 @@
+.wave-divider {
+  width: 100%;
+  height: 25px;
+  border: none;
+  background-image: url("../img/bg-zigzag-line-cut.svg");
+  background-repeat: repeat-x;
+}
+
+@media #{$mobile-width-only} {
+  .wave-divider {
+    display: none;
+  }
+}
