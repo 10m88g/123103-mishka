@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Главная</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -12,30 +13,32 @@
 
     <!-- Модальное окно -->
       <div class="modal" hidden>
-        <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
+      <div class="modal__wrapper">
+          <h2 class="modal__header">ДОБАВИТЬ В КОРЗИНУ</h2>
 
-        <p class="modal__desc">Выберите размер:</p>
+          <p class="modal__desc">Выберите размер:</p>
 
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="modal__btn-block">
-            <input type="radio" class="modal__input-radio" id="size-S" name="size" value="S" checked>
-            <label for="size-S" class="modal__label-radio">
-              S
-            </label>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal__btn-block">
+              <input type="radio" class="modal__input-radio" id="size-S" name="size" value="S" checked>
+              <label for="size-S" class="modal__label-radio">
+                S
+              </label>
 
-            <input class="modal__input-radio" id="size-M" type="radio" name="size" value="M">
-            <label class="modal__label-radio" for="size-M">
-              M
-            </label>
+              <input class="modal__input-radio" id="size-M" type="radio" name="size" value="M">
+              <label class="modal__label-radio" for="size-M">
+                M
+              </label>
 
-            <input class="modal__input-radio" id="size-L" type="radio" name="size" value="L">
-            <label class="modal__label-radio" for="size-L">
-              L
-            </label>
+              <input class="modal__input-radio" id="size-L" type="radio" name="size" value="L">
+              <label class="modal__label-radio" for="size-L">
+                L
+              </label>
 
-          </div>
-          <button type="submit" class="modal__btn-submit">Добавить</button>
-        </form>
+            </div>
+            <button type="submit" class="modal__btn-submit">Добавить</button>
+          </form>
+        </div>
       </div>
 
 
@@ -149,7 +152,7 @@
 
                   <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
 
-                  <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x 2x" alt="Вязанная корзинка"> <!-- width="260" height="315" -->
+                  <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанная корзинка"> <!-- width="260" height="315" -->
                 </picture>
               </a>
 
