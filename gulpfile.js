@@ -57,7 +57,7 @@ gulp.task("symbols", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
-    "img/**",
+    "img/*.svg",
     "js/**",
     "*.html"
   ], {
@@ -75,7 +75,7 @@ gulp.task("build", function(fn) {
     "clean",
     "copy",
     "style",
-    // "images",
+    "images",
     "symbols",
     fn
   )
