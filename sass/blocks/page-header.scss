@@ -23,9 +23,11 @@
 
     &__logo {
       align-self: flex-start;
+      width: 112px;
+      height: 46px;
       margin-left: 50px;
-      margin-top: 24px;
-      margin-bottom: 24px;
+      margin-top: 21px;
+      //margin-bottom: 24px;
       /* position: absolute;
       left: 50px; */
     }
@@ -35,5 +37,9 @@
 @media #{$desktop-width} {
   .page-header__logo {
     align-self: center;
+    width: 148px;
+    height: 73px;
+    margin-top: 8px;
+    margin-bottom: 7px;
   }
 }
