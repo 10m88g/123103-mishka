@@ -14,40 +14,41 @@
   }
 
   @media #{$retina} {
-    background-image: url("../img/hero-mobile@2x.jpg");
+    @media #{$mobile-width-only} {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
 
-    &--catalog,
-    &--form {
-      background: none;
-      background-color: #f1f1f1;
+      &--catalog,
+      &--form {
+        background: none;
+        background-color: #f1f1f1;
+      }
     }
   }
+}
 
+.jumbotron__title {
+  flex-basis: 100%;
+  margin-top: 69px;
 
-  &__title {
-    flex-basis: 100%;
-    margin-top: 69px;
+  padding-left: 5px;  /* для того, чтобы слова не переносились на др строку */
+  padding-right: 5px;
+  margin-bottom: 123px;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
 
-    padding-left: 5px;  /* для того, чтобы слова не переносились на др строку */
-    padding-right: 5px;
-    margin-bottom: 123px;
-    font-size: 27px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-
-    &--catalog,
-    &--form {
-      background: none;
-      margin-bottom: 80px;
-    }
+  &--catalog,
+  &--form {
+    background: none;
+    margin-bottom: 80px;
   }
+}
 
-
-  &__nav {
-    flex-basis: 100%;
-    align-self: flex-end;
-  }
+.jumbotron__nav {
+  flex-basis: 100%;
+  align-self: flex-end;
 }
 
 @media #{$tablet-width} {
@@ -56,6 +57,12 @@
     width: 768px;
     position: relative;
     background-image: url('../img/hero-desktop@1x.jpg');
+
+    &--catalog,
+    &--form {
+      background: none;
+      background-color: #f1f1f1;
+    }
 
     @media #{$retina} {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -67,30 +74,24 @@
         background-color: #f1f1f1;
       }
     }
+  }
+
+  .jumbotron__title {
+    margin-top: 153px;
+    margin-bottom: 373px;
+    font-size: 43px;
+    line-height: 50px;
 
     &--catalog,
     &--form {
-      background: none;
-      background-color: #f1f1f1;
+      margin-top: 90px;
+      margin-bottom: 85px;
     }
+  }
 
-    &__title {
-      margin-top: 153px;
-      margin-bottom: 373px;
-      font-size: 43px;
-      line-height: 50px;
-
-      &--catalog,
-      &--form {
-        margin-top: 90px;
-        margin-bottom: 85px;
-      }
-    }
-
-    &__nav {
-      margin-right: 50px;
-      margin-left: 50px;
-    }
+  .jumbotron__nav {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 
   .jumbotron:after {
@@ -110,20 +111,21 @@
 @media #{$desktop-width} {
   .jumbotron {
     width: 1150px;
+  }
 
-    &__title {
-      margin-top: 153px;
-      margin-bottom: 360px;
-      font-size: 53px;
-      line-height: 57px;
+  .jumbotron__title {
+    margin-top: 153px;
+    margin-bottom: 360px;
+    font-size: 53px;
+    line-height: 57px;
 
-      &--catalog,
-      &--form {
-        margin-top: 90px;
-        margin-bottom: 85px;
-      }
+    &--catalog,
+    &--form {
+      margin-top: 90px;
+      margin-bottom: 85px;
     }
   }
+
 
   .jumbotron:after {
     background-size: 60px 34px;
