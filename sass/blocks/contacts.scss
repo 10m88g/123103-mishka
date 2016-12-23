@@ -85,7 +85,8 @@
     line-height: 50px;
 
     &:after {
-      content: url('../img/icon-flag.svg');
+      content: url(../img/symbols.svg);
+            /* url('../img/icon-flag.svg'); */
       position: absolute;
       top: -15px;
       right: 3px;

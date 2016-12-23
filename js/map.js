@@ -9,6 +9,7 @@ function initMap() {
   var beachMarker = new google.maps.Marker({
     position: {lat: 59.936355, lng: 30.321623},
     map: map,
-    icon: image
+    icon: image,
+    title: "Ми-ми-мишка"
   });
 }

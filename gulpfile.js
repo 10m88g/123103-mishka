@@ -58,13 +58,13 @@ gulp.task("images", function() {
 })
 
 gulp.task("symbols", function() {
-  return gulp.src("img/**/*.svg")
+  return gulp.src("img/svg/*.svg")
     .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("symbols.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("img/svg"));
 });
 
 gulp.task("copy", function() {
