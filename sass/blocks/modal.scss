@@ -1,56 +1,99 @@
 .modal {
-  width: $content-width;
-  margin: $content-margin;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  background-color: rgba(255,255,255,0.9);
 
+}
+
+.modal__content {
+  width: $full-width;
+  box-sizing: border-box;
+  padding-top: 55px;
+  padding-right: 30px;
+  padding-bottom: 45px;
+  padding-left: 30px;
+  background-color: #fff;
   text-align: center;
+  border: 1px solid #c7c7c7;
+  box-shadow: 0 5px 10px 0 rgba(0,1,1,0.25);
+}
 
-  &__header {
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: bold;
+.modal__header {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal__desc {
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.modal__label-radio {
+  display: inline-block;
+  width: 78px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+
+  border: 2px solid #ececec;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__input-radio {
+  display: none;
+}
+
+.modal__input-radio:checked + .modal__label-radio {
+  border-color: #63d1bb;
+}
+.modal__label-radio:hover {
+  border-color: #c7c7c7;
+}
+
+.modal__btn-submit {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  border: none;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: #63d1bb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media #{$tablet-width} {
+  .modal__content {
+    width: 565px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-right: 108px;
+    padding-left: 108px;
   }
 
-  &__desc {
-    font-size: 15px;
-    line-height: 30px;
-    color: #444444;
+  .modal__header {
+    line-height: 57px;
   }
 
-  &__label-radio {
-    display: inline-block;
-    width: 78px;
-    padding-top: 14px;
-    padding-bottom: 18px;
-
-    border: 2px solid #ececec;
-    font-size: 17px;
-    line-height: 16px;
-    font-weight: bold;
-    cursor: pointer;
-
+  .modal__desc {
+    font-style: 17px;
   }
 
-  &__input-radio {
-    display: none;
+  .modal__label-radio {
+    width: 108px;
   }
-
-  &__input-radio:checked + &__label-radio {
-    border: 2px solid #63d1bb;
-  }
-
-  &__btn-submit {
-    display: block;
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 16px;
-    padding-bottom: 17px;
-    border: none;
-    font-size: 17px;
-    line-height: 16px;
-    font-weight: bold;
-    background-color: #63d1bb;
-    color: #ffffff;
-    cursor: pointer;
-  }
-
 }
