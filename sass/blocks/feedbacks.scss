@@ -1,51 +1,64 @@
 .feedbacks {
   border-top: 1px solid #fff;
+}
 
-  &__wrapper {
-    width: $content-width;
-    margin: $content-margin;
+.feedbacks__wrapper {
+  width: $content-width;
+  margin: $content-margin;
+}
+
+.feedbacks__header {
+  margin-top: 57px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+}
+
+.feedbacks__control {
+  position: relative;
+  height: 50px;
+}
+
+.feedbacks__control-btn {
+  position: absolute;
+  width: 50%;
+  height: 50px;
+  // padding-top: 12px;
+  padding: 0;
+  border: 1px solid #ececec;
+  background-color: transparent;
+
+  &--left {
+    left: 0;
   }
 
-  &__header {
-    margin-top: 57px;
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: left;
-    color: #000000;
+  &--right {
+    right: 0;
+    border-left: none;
   }
 
-  &__control {
-    position: relative;
-    height: 50px;
-
-    &-btn {
-      position: absolute;
-      width: 50%;
-      height: 50px;
-      // padding-top: 12px;
-      padding: 0;
-      border: 1px solid #ececec;
-    }
-    &-btn--left {
-      left: 0;
-    }
-
-    &-btn--right {
-      right: 0;
-      border-left: none;
-    }
-
-    &-btn img {
-      vertical-align: middle;
-    }
-
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
-  &__add-btn {
-    margin-top: 38px;
-    margin-bottom: 48px;
+  &:active {
+    opacity: 0.3;
+    outline: none;
   }
+
+}
+
+.feedbacks__control-btn img {
+  vertical-align: middle;
+}
+
+.feedbacks__add-btn {
+  margin-top: 38px;
+  margin-bottom: 48px;
 }
 
 @media #{$tablet-width} {
@@ -59,37 +72,37 @@
       background-image: url("../img/review@2x.jpg");
       background-size: 350px auto;
     }
+  }
 
-    &__wrapper {
-      position: relative;
-      width: 668px;
-    }
+  .feedbacks__wrapper {
+    position: relative;
+    width: 668px;
+  }
 
-    &__header {
-      margin-top: 76px;
-      font-size: 43px;
-      line-height: 50px;
-    }
+  .feedbacks__header {
+    margin-top: 76px;
+    font-size: 43px;
+    line-height: 50px;
+  }
 
-    &__control {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 175px;
+  .feedbacks__control {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 175px;
+  }
 
-      &-btn {
-        border: none;
-      }
+  .feedbacks__control-btn {
+    border: none;
+  }
 
-    }
 
-    &__add-btn {
-      position: absolute;
-      right: 0;
-      top: 5px;
-      margin: 0;
-      width: 170px;
-    }
+  .feedbacks__add-btn {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    margin: 0;
+    width: 170px;
   }
 }
 
@@ -97,33 +110,33 @@
   .feedbacks {
     background: none;
     margin-bottom: 60px;
+  }
 
-    &__wrapper {
-      width: 1050px;
-      box-sizing: border-box;
-      padding-left: 170px;
-      padding-top: 75px;
-      padding-bottom: 65px;
-      background:  url('../img/review@1x.jpg') no-repeat left top;
+  .feedbacks__wrapper {
+    width: 1050px;
+    box-sizing: border-box;
+    padding-left: 170px;
+    padding-top: 75px;
+    padding-bottom: 65px;
+    background:  url('../img/review@1x.jpg') no-repeat left top;
 
-      @media #{$retina} {
-        background-image: url("../img/review@2x.jpg");
-        background-size: 350px auto;
-      }
+    @media #{$retina} {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
     }
+  }
 
-    &__header {
-      margin-top: 0;
-      font-size: 53px;
-      line-height: 57px;
-    }
+  .feedbacks__header {
+    margin-top: 0;
+    font-size: 53px;
+    line-height: 57px;
+  }
 
-    &__add-btn {
-      top: 85px;
-    }
+  .feedbacks__add-btn {
+    top: 85px;
+  }
 
-    &__control {
-      bottom: 98px;
-    }
+  .feedbacks__control {
+    bottom: 98px;
   }
 }
