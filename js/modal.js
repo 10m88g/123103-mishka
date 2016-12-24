@@ -4,14 +4,25 @@ var modal = document.querySelector('.modal');
 var modalContent = document.querySelector('.modal__content');
 var targets = document.querySelectorAll('.modal-show');
 
-/*targets.forEach = [].forEach;
+targets.forEach = [].forEach;
 targets.forEach(function(target) {
   target.addEventListener('click', showModal);
-})*/
+})
 
-[].forEach.call(targets, function(target) {
-  target.addEventListener('click', showModal);
-});
+//полифилл closest для ИЕ
+if (window.Element && !Element.prototype.closest) {
+    Element.prototype.closest =
+    function(s) {
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+            i,
+            el = this;
+        do {
+            i = matches.length;
+            while (--i >= 0 && matches.item(i) !== el) {};
+        } while ((i < 0) && (el = el.parentElement));
+        return el;
+    };
+}
 
 
 function showModal(evnt) {
