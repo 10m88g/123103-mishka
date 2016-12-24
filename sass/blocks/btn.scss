@@ -1,7 +1,6 @@
 .btn,
 .btn:focus {
   display: block;
-  // height: 34px;
   padding: 0;
   padding-top: 14px;
   padding-bottom: 16px;
@@ -11,7 +10,7 @@
 
   font-size: 17px;
   line-height: 16px;
-  color: #444444;
+  color: $text-brown;
   background-color: transparent;
   font-weight: bold;
   text-align: center;
@@ -20,7 +19,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #444;
+    background-color: $text-brown;
     color: #fff;
   }
 

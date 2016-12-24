@@ -1,14 +1,13 @@
 .goods-week-card {
   display: flex;
-  // flex-direction: row-reverse;
   flex-wrap: wrap;
-  width: $content-width;
+  width: $mobile-content-width;
   margin: $content-margin;
   margin-bottom: 40px;
 
   font-size: 19px;
   line-height: 24px;
-  color: #444444;
+  color: $text-brown;
 }
 .goods-week-card__title {
   flex-basis: 100%;
@@ -74,7 +73,6 @@
 }
 
 .goods-week-card__price {
-  //flex-basis: 100%;
   margin-top: 19px;
   font-size: 17px;
   line-height: 24px;
@@ -119,7 +117,6 @@
 
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
   }
 
   .goods-week-card__desc {
@@ -154,7 +151,7 @@
 
 @media #{$desktop-width} {
   .goods-week-card {
-    width: $descktop-content-width;
+    width: $desktop-content-width;
     margin-bottom: 0;
   }
 

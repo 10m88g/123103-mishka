@@ -128,14 +128,14 @@
   .contacts {
     position: relative;
     box-sizing: border-box;
-    width: 1050px;
+    width: $desktop-content-width;
     margin: $content-margin;
     padding-left: 175px;
     margin-bottom: 105px;
   }
 
   .contacts__content-wrapper {
-    width: $descktop-content-width;
+    width: $desktop-content-width;
     padding-right: 560px;
   }
 

@@ -20,6 +20,11 @@
   }
 }
 
+.page-header__logo img {
+  width: 90px;
+  height: 40px;
+}
+
 
 @media #{$tablet-width} {
   .page-header{
@@ -34,6 +39,10 @@
     margin-top: 21px;
   }
 
+  .page-header__logo img {
+    width: 112px;
+    height: 46px;
+  }
 }
 
 @media #{$desktop-width} {
@@ -44,5 +53,10 @@
     margin-top: 8px;
     margin-bottom: 7px;
     margin-left: 0;
+  }
+
+  .page-header__logo img {
+    width: 148px;
+    height: 73px;
   }
 }

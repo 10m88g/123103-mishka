@@ -3,7 +3,7 @@
 }
 
 .feedbacks__wrapper {
-  width: $content-width;
+  width: $mobile-content-width;
   margin: $content-margin;
 }
 
@@ -25,7 +25,6 @@
   position: absolute;
   width: 50%;
   height: 50px;
-  // padding-top: 12px;
   padding: 0;
   border: 1px solid #ececec;
   background-color: transparent;
@@ -113,7 +112,7 @@
   }
 
   .feedbacks__wrapper {
-    width: $descktop-content-width;
+    width: $desktop-content-width;
     box-sizing: border-box;
     padding-left: 175px;
     padding-top: 75px;

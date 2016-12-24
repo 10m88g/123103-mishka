@@ -1,6 +1,10 @@
 .main-nav {
   position: relative;
   border-bottom: 1px solid #ececec;
+
+  &--opened .main-nav__toggle:before {
+    content: url("../img/icon-menu-close.svg");
+  }
 }
 
 .main-nav__toggle {
@@ -26,13 +30,10 @@
     content: url("../img/icon-menu-open.svg");
   }
 
-  &--opened .main-nav__toggle:before {
-    content: url("../img/icon-menu-close.svg");
-  }
 }
 
 .main-nav__wrapper {
-  width: $full-width;
+  width: $mobile-full-width;
   margin: $content-margin;
   position: absolute;
   display: none;
@@ -114,12 +115,6 @@
 }
 
 @media #{$tablet-width} {
-  .main-nav {
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    left: 0; */
-  }
   .main-nav__toggle {
     display: none;
   }
@@ -202,7 +197,7 @@
 
 @media #{$desktop-width} {
   .main-nav__wrapper {
-    width: $descktop-content-width;
+    width: $desktop-content-width;
   }
 
   .main-nav__items--catalog-form {

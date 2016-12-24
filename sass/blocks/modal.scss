@@ -10,7 +10,7 @@
 }
 
 .modal__content {
-  width: $full-width;
+  width: $mobile-full-width;
   box-sizing: border-box;
   padding-top: 55px;
   padding-right: 30px;
@@ -33,7 +33,7 @@
   margin-bottom: 30px;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: $text-brown;
 }
 
 .modal__label-radio {

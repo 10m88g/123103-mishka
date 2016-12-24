@@ -1,8 +1,6 @@
 .jumbotron {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  /* min-height: 280px; */
   margin: $content-margin;
   background: url('../img/hero-mobile@1x.jpg') no-repeat center top;
   background-color: #fafafa;
@@ -10,7 +8,7 @@
   &--catalog,
   &--form {
     background: none;
-    background-color: #f1f1f1;
+    background-color: $footer-gray;
   }
 
   @media #{$retina} {
@@ -21,7 +19,7 @@
       &--catalog,
       &--form {
         background: none;
-        background-color: #f1f1f1;
+        background-color: $footer-gray;
       }
     }
   }
@@ -30,8 +28,7 @@
 .jumbotron__title {
   flex-basis: 100%;
   margin-top: 69px;
-
-  padding-left: 5px;  /* для того, чтобы слова не переносились на др строку */
+  padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 123px;
   font-size: 27px;
@@ -53,7 +50,6 @@
 
 @media #{$tablet-width} {
   .jumbotron {
-    /* min-height: 745px; */
     width: 768px;
     position: relative;
     background-image: url('../img/hero-desktop@1x.jpg');
@@ -61,7 +57,7 @@
     &--catalog,
     &--form {
       background: none;
-      background-color: #f1f1f1;
+      background-color: $footer-gray;
     }
 
     @media #{$retina} {
@@ -71,7 +67,7 @@
       &--catalog,
       &--form {
         background: none;
-        background-color: #f1f1f1;
+        background-color: $footer-gray;
       }
     }
   }
@@ -107,7 +103,7 @@
 
 @media #{$desktop-width} {
   .jumbotron {
-    width: 1150px;
+    width: $desktop-full-width;
   }
 
   .jumbotron__title {
@@ -119,7 +115,7 @@
     &--catalog,
     &--form {
       margin-top: 90px;
-      margin-bottom: 85px;
+      margin-bottom: 115px;
     }
   }
 

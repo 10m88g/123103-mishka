@@ -1,13 +1,13 @@
 .page-wrapper {
   position: relative;
-  width: $full-width;
+  width: $mobile-full-width;
   margin: $content-margin;
 
   @media #{$tablet-width} {
-    width: 768px;
+    width: $tablet-full-width;
   }
 
   @media #{$desktop-width} {
-    width: 1150px;
+    width: $desktop-full-width;
   }
 }

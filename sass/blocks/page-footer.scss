@@ -28,7 +28,6 @@
 .page-footer__social-link {
   display: inline-block;
   vertical-align: middle;
-  //height: 30px;
   width: 23px;
   margin-left: 20px;
   margin-right: 20px;
@@ -52,14 +51,12 @@
   line-height: 18px;
   text-align: center;
   font-weight: bold;
-  color: #000000;
+  color: $text-black;
 }
 
 .page-footer__copyright-icon {
   display: inline-block;
   padding: 5px 15px;
-  // padding-top: 15px;
-  // padding-left: 20px;
   vertical-align: middle;
   fill: $decor-green-light;
 }
@@ -124,6 +121,6 @@
 
 @media #{$desktop-width} {
   .page-footer__wrapper {
-      width: 1050px;
+      width: $desktop-content-width;
     }
 }

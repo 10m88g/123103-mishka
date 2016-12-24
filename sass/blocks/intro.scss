@@ -1,15 +1,15 @@
 .intro {
-  width: $content-width;
+  width: $mobile-content-width;
   margin: $content-margin;
   margin-top: 18px;
   font-size: 13px;
   line-height: 24px;
-  color: #444444;
+  color: $text-brown;
 }
 
 @media #{$tablet-width} {
   .intro {
-    width: 668px;
+    width: $tablet-content-width;
     margin-top: 72px;
     font-size: 17px;
     line-height: 30px;
@@ -19,7 +19,7 @@
 @media #{$desktop-width} {
   .intro {
     width: 700px;
-    margin-top: 143px;
+    margin-top: 115px;
     margin-left: 225px;
     margin-right: 225px;
   }

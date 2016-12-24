@@ -1,7 +1,7 @@
 /*---------FONTS----------------------*/
 @font-face {
 font-family: "OpenSans";
-  src: /* url("../fonts/opensans.woff") format("woff"), */
+  src: url("../fonts/opensans.woff") format("woff"),
     url("../fonts/opensans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -22,37 +22,6 @@ body {
   padding: 0;
   font-family: 'OpenSans', 'Arial', sans-serif;
   background-color: #fff;
-
-  /* -------------TEMP BACKGROUNDS------------- */
-  /* background: url('../img/mishka-index-mobile.jpg') no-repeat center top;
-
-  @media #{$tablet-width} {
-    background: url('../img/mishka-index-tablet.jpg') no-repeat center top;;
-  }
-
-  @media #{$desktop-width} {
-    background: url('../img/mishka-index-desktop.jpg') no-repeat center top;;
-  } */
-  /* ---------------CATALOG-------------------------- */
-  /* background: url('../img/mishka-catalog-mobile.jpg') no-repeat center top;
-
-  @media #{$tablet-width} {
-    background: url('../img/mishka-catalog-tablet.jpg') no-repeat center top;;
-  }
-
-  @media #{$desktop-width} {
-    background: url('../img/mishka-catalog-desktop.jpg') no-repeat center top;;
-  } */
-  /* ---------------FORM-------------------------- */
-/*   background: url('../img/mishka-form-mobile.jpg') no-repeat center top;
-
-  @media #{$tablet-width} {
-    background: url('../img/mishka-form-tablet.jpg') no-repeat center top;;
-  }
-
-  @media #{$desktop-width} {
-    background: url('../img/mishka-form-desktop.jpg') no-repeat center top;;
-  } */
 }
 
 a,
