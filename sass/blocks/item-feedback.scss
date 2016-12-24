@@ -1,54 +1,50 @@
 .item-feedback {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   color: #444444;
+}
 
-  &__text {
-    margin: 0;
-    margin-top: 23px;
-    font-size: 15px;
-    line-height: 30px;
-  }
+.item-feedback__text {
+  margin: 0;
+  margin-top: 23px;
+  font-size: 15px;
+  line-height: 30px;
+}
 
-  &__author {
-    margin-top: 27px;
-  }
+.item-feedback__author {
+  margin-top: 33px;
+}
 
-  &__author-name {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: bold;
-    color: #000000;
-  }
+.item-feedback__author-name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+}
 
-  &__author-twitter {
-    font-size: 18px;
-    line-height: 30px;
-    color: #444444;
-  }
+.item-feedback__author-twitter {
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
 }
 
 @media #{$tablet-width} {
-  .item-feedback {
-    &__text {
-      margin-top: 50px;
-      font-size: 17px;
-    }
+  .item-feedback__text {
+    margin-top: 50px;
+    font-size: 17px;
+  }
 
-    &__author {
-      margin-top: 56px;
-    }
+  .item-feedback__author {
+    margin-top: 56px;
   }
 }
 
 @media #{$desktop-width} {
-  .item-feedback {
-    &__text {
-      margin-right: 100px;
-    }
+  .item-feedback__text {
+    margin-right: 100px;
+  }
 
-    &__author {
-      margin-top: 35px;
-    }
+  .item-feedback__author {
+    margin-top: 40px;
   }
 }

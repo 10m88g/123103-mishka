@@ -8,6 +8,20 @@
 
 @media #{$mobile-width-only} {
   .wave-divider {
-    display: none;
+    background-size: 16px 7px;
+  }
+}
+
+@media #{$tablet-width} {
+  .wave-divider {
+    background-size: 38px 14px;
+  }
+}
+
+@media #{$desktop-width} {
+  .wave-divider {
+    margin-top: -15px;
+    margin-bottom: 30px;
+    background-size: auto;
   }
 }

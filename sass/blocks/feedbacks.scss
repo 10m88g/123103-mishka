@@ -80,7 +80,7 @@
   }
 
   .feedbacks__header {
-    margin-top: 76px;
+    margin-top: 80px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -113,9 +113,9 @@
   }
 
   .feedbacks__wrapper {
-    width: 1050px;
+    width: $descktop-content-width;
     box-sizing: border-box;
-    padding-left: 170px;
+    padding-left: 175px;
     padding-top: 75px;
     padding-bottom: 65px;
     background:  url('../img/review@1x.jpg') no-repeat left top;

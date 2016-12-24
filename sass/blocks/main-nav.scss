@@ -61,7 +61,7 @@
 
 .main-nav__icon {
   position: absolute;
-  top: 25px;
+  top: 32px;
   left: 30px;
   fill: #444;
   opacity: 0.2;
@@ -69,9 +69,9 @@
 
 .main-nav__item-link {
   display: block;
-  padding-top: 20px;
+  padding-top: 27px;
   padding-left: 75px;
-  padding-bottom: 33px;
+  padding-bottom: 27px;
   border-top: 1px solid #ececec;
   font-size: 17px;
   line-height: 24px;
@@ -90,12 +90,6 @@
   fill: #63d1bb;
   opacity: 1;
 }
-  /* ВСЁ-РАВНО НЕ МОГУ ЦВЕТ ИЗМЕНИТЬ(((
-  ТОЛЬКО ЧЕРЕЗ ИНЛАЙН НЕПОСРЕДСТВЕННО У path
-  & .main-nav__icon path {
-    fill: #63d1bb;
-  }
-  */
 
 .main-nav__item-link:active .main-nav__icon {
   fill: #63d1bb;
@@ -132,7 +126,7 @@
 
   .main-nav__wrapper {
     display: flex;
-    width: 668px;
+    width: $tablet-content-width;
     background-color: transparent;
   }
 
@@ -208,7 +202,7 @@
 
 @media #{$desktop-width} {
   .main-nav__wrapper {
-    width: 1050px;
+    width: $descktop-content-width;
   }
 
   .main-nav__items--catalog-form {

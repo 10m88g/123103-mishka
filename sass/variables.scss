@@ -2,19 +2,27 @@ $full-width: 320px;
 $content-width: 260px;
 $content-margin: 0 auto;
 
+/* --- WIDTHS --- */
+$mobile-full-width: 320px;
+$mobile-content-width: 260px;
 
-@media (min-width: 768px) {
-  $full-width: 768px;
-  $content-width: 668px;
-}
+$tablet-full-width: 768px;
+$tablet-content-width: 668px;
 
-@media (min-width: 1150px) {
-  $full-width: 1150px;
-  $content-width: 1050px;
-}
+$descktop-full-width: 1150px;
+$descktop-content-width: 1050px;
 
+/* --- MEDIA QUERIES--- */
 $mobile-width-only: "(max-width: 767px)";
 $tablet-width: "(min-width: 768px)";
 $desktop-width: "(min-width: 1150px)";
 
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+/*  --- COLORS --- */
+$decor-green-light: #62d1ba;
+$decor-green-dark: #63d1bb;
+$text-brown: #444;
+$text-black: #000;
+$text-white: #fff;
+$footer-gray: #f1f1f1;
