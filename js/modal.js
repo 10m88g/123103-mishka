@@ -36,15 +36,16 @@ function showModal(evnt) {
 
   //чтобы сразу не закрыть поставим таймер
   setTimeout(function () {
-    document.body.addEventListener('click', hideModal);
+    document.body.addEventListener("click", hideModal);
+    document.addEventListener("keyup", hideModal);
   }, 10);
 }
 
 function hideModal (evnt) {
-
-  if (!evnt.target.closest(".modal__content")) {
-    modal.hidden = true;
-  }
-
-  document.body.removeEventListener('click', hideModal);
+  //закрываем по ESC или по клику на свободн области
+  if ( (evnt.type == "keyup") && (evnt.keyCode == 27) || (evnt.type == "click") && (!evnt.target.closest(".modal__content")) ) {
+      modal.hidden = true;
+      document.body.removeEventListener('click', hideModal);
+      document.removeEventListener('keyup', hideModal);
+    }
 }
