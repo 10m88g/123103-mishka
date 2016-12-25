@@ -71,6 +71,19 @@
   border: none;
 }
 
+.contacts__map--no-js {
+  position: relative;
+
+  &:before {
+    content: url("../img/icon-map-pin.svg");
+    position: absolute;
+    top: 170px;
+    left: 120px;
+    width: 65px;
+    height: 110px;
+  }
+}
+
 .contacts__mailus-btn {
   width: $mobile-content-width;
   margin: $content-margin;
@@ -115,6 +128,10 @@
     width: $tablet-full-width;
     height: 458px;
     margin-top: 58px;
+  }
+
+  .contacts__map--no-js:before {
+    left: 350px;
   }
 
   .contacts__mailus-btn {
@@ -168,6 +185,10 @@
     height: auto;
     width: 525px;
     margin: 0;
+  }
+
+  .contacts__map--no-js:before {
+    left: 245px;
   }
 
   .contacts__mailus-btn {
