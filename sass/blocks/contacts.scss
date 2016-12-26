@@ -28,7 +28,8 @@
   flex-basis: 100%;
   margin-top: 28px;
 
-  &::after {
+  &::after,
+  &::before {
     content: '';
     display: table;
     clear: both;
@@ -75,7 +76,7 @@
   position: relative;
 
   &:before {
-    content: url("../img/icon-map-pin.svg");
+    content: url('../img/icon-map-pin.svg');
     position: absolute;
     top: 170px;
     left: 120px;
@@ -148,12 +149,12 @@
     width: $desktop-content-width;
     margin: $content-margin;
     padding-left: 175px;
+    padding-right: 560px;
     margin-bottom: 105px;
   }
 
   .contacts__content-wrapper {
-    width: $desktop-content-width;
-    padding-right: 560px;
+    width: 315px;
   }
 
   .contacts__header {

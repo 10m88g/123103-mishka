@@ -2,8 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Форма заказа</title>
+
+    <!-- Для поддержки picture в IE11 -->
+    <script>
+      function loadJS(u){
+        var r = document.getElementsByTagName( "script" )[ 0 ],
+          s = document.createElement( "script" );
+        s.src = u;r.parentNode.insertBefore( s, r );
+      }
+
+      if(!window.HTMLPictureElement) {
+        document.createElement('picture');
+        loadJS("respimage.min.js");
+      }
+    </script>
+    <script src="js/respimage.min.js" async></script>
+
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
   </head>
 
@@ -160,7 +176,8 @@
 
             <fieldset class="order-form__fieldset  order-form__fieldset--phone">
               <legend class="order-form__legend">Тел</legend>
-              <input type="tel" name="phone" placeholder="+7 XXX XX XX*" required>
+              <label for="phone">Телефон</label>
+              <input type="tel" name="phone" placeholder="+7 XXX XX XX*" id="phone" required>
               <svg class="order-form__icon" width="25" height="24">
                 <use xlink:href="#icon-phone" />
               </svg>
@@ -168,7 +185,8 @@
 
             <fieldset class="order-form__fieldset  order-form__fieldset--mail">
               <legend class="order-form__legend">E-mail</legend>
-              <input type="email" name="email" placeholder="Ваш Email*" required>
+              <label for="email">Ваш Email</label>
+              <input type="email" name="email" placeholder="Ваш Email*" id="email" required>
               <svg class="order-form__icon" width="30" height="30">
                 <use xlink:href="#icon-mail" />
               </svg>

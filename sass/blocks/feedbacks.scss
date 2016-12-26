@@ -68,7 +68,7 @@
     background:  url('../img/review@1x.jpg') no-repeat left top;
 
     @media #{$retina} {
-      background-image: url("../img/review@2x.jpg");
+      background-image: url('../img/review@2x.jpg');
       background-size: 350px auto;
     }
   }
@@ -120,7 +120,7 @@
     background:  url('../img/review@1x.jpg') no-repeat left top;
 
     @media #{$retina} {
-      background-image: url("../img/review@2x.jpg");
+      background-image: url('../img/review@2x.jpg');
       background-size: 350px auto;
     }
   }

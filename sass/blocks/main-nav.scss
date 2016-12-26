@@ -3,7 +3,7 @@
   border-bottom: 1px solid #ececec;
 
   &--opened .main-nav__toggle:before {
-    content: url("../img/icon-menu-close.svg");
+    content: url('../img/icon-menu-close.svg');
   }
 }
 
@@ -27,7 +27,7 @@
   }
 
   &:before {
-    content: url("../img/icon-menu-open.svg");
+    content: url('../img/icon-menu-open.svg');
   }
 
 }
