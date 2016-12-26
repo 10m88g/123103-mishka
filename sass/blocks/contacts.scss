@@ -28,23 +28,18 @@
   flex-basis: 100%;
   margin-top: 28px;
 
-  &::after,
-  &::before {
-    content: '';
-    display: table;
-    clear: both;
-  }
+  // TEMP
+  display: flex;
+  text-align: left;
 }
 
 .contacts__key {
-  float: left;
-  width: 75px;
+  flex-basis: 25%;
+  margin-right: 15px;
 }
 
 .contacts__key-value {
-  margin: 0;
-  margin-left: 75px;
-  width: auto;
+
 }
 
 .contacts__value-mail {
@@ -125,6 +120,11 @@
     margin-top: 50px;
   }
 
+  .contacts__key {
+    flex-basis: 19%;
+    margin-right: 15px;
+  }
+
   .contacts__map-container {
     width: $tablet-full-width;
     height: 458px;
@@ -148,6 +148,7 @@
     box-sizing: border-box;
     width: $desktop-content-width;
     margin: $content-margin;
+    min-height: 380px;
     padding-left: 175px;
     padding-right: 560px;
     margin-bottom: 105px;
