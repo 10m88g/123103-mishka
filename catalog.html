@@ -2,8 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог</title>
+
+    <!-- Для поддержки picture в IE11 -->
+    <script>
+      function loadJS(u){
+        var r = document.getElementsByTagName( "script" )[ 0 ],
+          s = document.createElement( "script" );
+        s.src = u;r.parentNode.insertBefore( s, r );
+      }
+
+      if(!window.HTMLPictureElement) {
+        document.createElement('picture');
+        loadJS("respimage.min.js");
+      }
+    </script>
+    <script src="js/respimage.min.js" async></script>
+
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
   </head>
 
@@ -43,20 +59,20 @@
       </div>
 
 
-      <header class="page-header">
-          <a href="index.html" class="page-header__logo">
-            <picture>
-              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-mobile.svg" alt="Mishka" width="90" height="40">
-            </picture>
-          </a>
-
+      <header>
           <!-- При откл js, на мобильной версии, меню открыто, и в потоке -->
-          <nav class="page-header__nav main-nav main-nav--opened main-nav--no-js">
+          <nav class="main-nav main-nav--opened main-nav--no-js">
+
+            <a href="index.html" class="main-nav__logo">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" alt="Mishka" width="90" height="40">
+              </picture>
+            </a>
+
             <button class="main-nav__toggle" type="button">Открыть меню</button>
 
-            <div class="main-nav__wrapper">
 
               <ul class="main-nav__items main-nav__items--catalog-form">
                 <li class="main-nav__item main-nav__item--catalog">
@@ -102,7 +118,6 @@
                 </li>
               </ul>
 
-            </div>
           </nav>
       </header>
 

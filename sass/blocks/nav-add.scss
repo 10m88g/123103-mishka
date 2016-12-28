@@ -25,8 +25,10 @@
   }
 
   &--lamp::after {
-    content: url("../img/icon-interior.svg");
+    content: url('../img/icon-interior.svg');
     position: absolute;
+    width: 40px;
+    height: 69px;
     top: 20px;
     right: 35px;
     opacity: 0.5;
@@ -37,8 +39,10 @@
   }
 
   &--lego::after {
-    content: url("../img/icon-toy.svg");
+    content: url('../img/icon-toy.svg');
     position: absolute;
+    width: 60px;
+    height: 67px;
     right: 25px;
     top: 20px;
     opacity: 0.5;

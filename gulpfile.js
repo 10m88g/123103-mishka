@@ -94,7 +94,7 @@ gulp.task("build", function(fn) {
   )
 })
 
-gulp.task("serve", function() {
+gulp.task("serve", ["style-dev"], function() {
   server.init({
     server: ".",
     notify: false,
