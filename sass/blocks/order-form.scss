@@ -16,7 +16,7 @@
 }
 
 .order-form__labels-wrapper {
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
 .order-form__legend {
@@ -33,7 +33,7 @@
 
 
 .order-form__fieldset--color {
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .order-form__label-radio,
@@ -41,17 +41,19 @@
   position: relative;
   display: block;
   padding-left: 60px;
-  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
 .order-form__label-checkbox {
-  margin-top: 43px;
+  margin-top: 23px;
 }
 
-.order-form__label-checkbox--first {
-  margin-top: 29px;
-}
+// .order-form__label-checkbox--first {
+//   margin-top: 29px;
+// }
 
 .order-form__input-radio,
 .order-form__input-checkbox {
@@ -61,7 +63,7 @@
 .order-form__label-radio:before {
   content: '';
   position: absolute;
-  top: -10px;
+  top: -5px;
   left: 0;
   box-sizing: border-box;
   width: 40px;
@@ -79,7 +81,7 @@
 .order-form__label-checkbox:before {
   content: '';
   position: absolute;
-  top: -10px;
+  top: 0;
   left: 0;
   box-sizing: border-box;
   width: 39px;
@@ -105,7 +107,7 @@
 
 
 .order-form__fieldset--name {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .order-form__labels-wrapper--name {
@@ -203,7 +205,7 @@
   margin-top: 40px;
 }
 .order-form__fieldset--addition {
-  margin-top: 39px;
+  margin-top: 40px;
 }
 
 .order-form__labels-wrapper {
@@ -288,7 +290,7 @@
 
   .order-form__label-radio,
   .order-form__label-checkbox {
-    margin-top: 55px;
+    margin-top: 40px;
     padding-left: 80px;
     font-size: 19px;
   }
@@ -321,7 +323,7 @@
   .order-form__label-radio:before {
     content: '';
     position: absolute;
-    top: -13px;
+    top: -5px;
     box-sizing: border-box;
     width: 52px;
     height: 52px;
@@ -334,7 +336,7 @@
   }
 
   .order-form__label-checkbox:before {
-    top: -14px;
+    top: 0;
     left: 0;
     box-sizing: border-box;
     width: 54px;
@@ -346,7 +348,7 @@
   }
 
   .order-form__fieldset--color {
-    margin-top: 20px;
+    margin-top: 10px;
     padding-bottom: 65px;
   }
 
@@ -354,12 +356,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .order-form__label-checkbox {
     flex-basis: 32%;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .order-form__legend--color  {
@@ -367,7 +369,7 @@
   }
 
   .order-form__fieldset--name {
-    margin-top: 55px;
+    margin-top: 50px;
     padding-bottom: 0;
   }
 
@@ -511,7 +513,7 @@
 
   .order-form__label-checkbox {
     flex-basis: 23%;
-    margin-top: 58px;
+    margin-top: 38px;
   }
 
   .order-form__legend--color {
