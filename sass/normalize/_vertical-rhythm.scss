@@ -7,7 +7,7 @@
 
 @function normalize-rhythm($value, $relative-to: $base-font-size, $unit: $base-unit) {
   @if unit($value) != px {
-    @error "The normalize vertical-rhythm module only supports px inputs. The typey library is better.";
+    @error 'The normalize vertical-rhythm module only supports px inputs. The typey library is better.';
   }
   @if $unit == rem {
     @return ($value / $base-font-size) * 1rem;
@@ -22,7 +22,7 @@
 
 @mixin normalize-font-size($value, $relative-to: $base-font-size) {
   @if unit($value) != 'px' {
-    @error "normalize-font-size() only supports px inputs. The typey library is better.";
+    @error 'normalize-font-size() only supports px inputs. The typey library is better.';
   }
   // px fallback for IE 8 and earlier. Note: IE 9/10 don't understand rem
   // in font shorthand, but font-size longhand is fine.

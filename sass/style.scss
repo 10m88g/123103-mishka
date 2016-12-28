@@ -1,34 +1,33 @@
-@import "_normalize.scss";
-@import "variables.scss";
+@import '_normalize.scss';
+@import 'variables.scss';
 
-@import "global/scaffolding.scss";
+@import 'global/scaffolding.scss';
 
 //COMMON
-@import "blocks/page-wrapper.scss";
-@import "blocks/content-wrapper.scss";
+@import 'blocks/page-wrapper.scss';
+@import 'blocks/content-wrapper.scss';
 
-@import "blocks/modal.scss";
-@import "blocks/page-header.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/page-footer.scss";
+@import 'blocks/modal.scss';
+@import 'blocks/main-nav.scss';
+@import 'blocks/page-footer.scss';
 
-@import "blocks/btn.scss";
+@import 'blocks/btn.scss';
 
-@import "blocks/jumbotron.scss";
+@import 'blocks/jumbotron.scss';
 
-@import "blocks/wave-divider.scss";
-@import "blocks/nav-add.scss";
-@import "blocks/goods-week-card.scss";
-@import "blocks/about-us.scss";
-@import "blocks/feedbacks.scss";
-@import "blocks/item-feedback.scss";
-@import "blocks/contacts.scss";
+@import 'blocks/wave-divider.scss';
+@import 'blocks/nav-add.scss';
+@import 'blocks/goods-week-card.scss';
+@import 'blocks/about-us.scss';
+@import 'blocks/feedbacks.scss';
+@import 'blocks/item-feedback.scss';
+@import 'blocks/contacts.scss';
 
 // CATALOG
-@import "blocks/goods-cards-container.scss";
-@import "blocks/goods-card.scss";
-@import "blocks/process-card.scss";
+@import 'blocks/goods-cards-container.scss';
+@import 'blocks/goods-card.scss';
+@import 'blocks/process-card.scss';
 
 //FORM
-@import "blocks/intro.scss";
-@import "blocks/order-form.scss";
+@import 'blocks/intro.scss';
+@import 'blocks/order-form.scss';

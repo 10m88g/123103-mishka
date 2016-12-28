@@ -139,10 +139,42 @@
   }
 }
 
-.order-form__fieldset--phone,
-.order-form__fieldset--mail {
-  position: relative;
+.order-form__fieldset--phone {
+  margin-top: 15px;
 }
+
+
+.order-form__fieldset-wrapper--phone,
+.order-form__fieldset-wrapper--mail {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.order-form__label-legend {
+  align-self: flex-start;
+  margin-top: -30px;
+  padding-right: 30px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $decor-green-dark;
+  background-color: #FFF;
+}
+
+
+
+.order-form__labels-wrapper--phone {
+  flex-basis: 100%;
+  margin-top: 13px;
+}
+
+.order-form__labels-wrapper--mail {
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+
 
 .order-form__fieldset--phone input,
 .order-form__fieldset--mail input{
@@ -165,29 +197,17 @@
   }
 }
 
-.order-form__fieldset.order-form__fieldset--phone label,
-.order-form__fieldset.order-form__fieldset--mail label{
-  font-size: 0;
-  height: 0;
-  width: 0;
-  margin: 0;
-  padding: 0;
-}
 
-.order-form__fieldset--phone {
-  margin-top: 15px;
-}
-
-.order-form__labels-wrapper--phone,
-.order-form__labels-wrapper--mail {
-  margin-top: 0;
-}
 
 .order-form__fieldset--mail {
   margin-top: 40px;
 }
 .order-form__fieldset--addition {
-  margin-top: 37px;
+  margin-top: 39px;
+}
+
+.order-form__labels-wrapper {
+  position: relative;
 }
 
 .order-form__icon {
@@ -196,6 +216,10 @@
   bottom: 16px;
   opacity: 0.2;
   fill: #000;
+}
+
+.order-form__icon--mail {
+  bottom: 10px;
 }
 
 .order-form__fieldset--phone input:hover + .order-form__icon,
@@ -262,17 +286,28 @@
     width: $tablet-content-width;
   }
 
-  .order-form__fieldset label {
+  .order-form__label-radio,
+  .order-form__label-checkbox {
     margin-top: 55px;
     padding-left: 80px;
     font-size: 19px;
   }
 
-  .order-form__legend {
+  .order-form__label-text {
+    font-size: 19px;
+  }
+
+  .order-form__legend,
+  .order-form__label-legend {
     flex-basis: 90px;
     padding: 0;
     margin-top: 55px;
     margin-right: auto;
+    background-color: transparent;
+  }
+
+  .order-form__label-legend {
+    padding: 0;
     background-color: transparent;
   }
 
@@ -322,7 +357,7 @@
     margin-top: 5px;
   }
 
-  .order-form__fieldset--color label {
+  .order-form__label-checkbox {
     flex-basis: 32%;
     margin-top: 60px;
   }
@@ -336,7 +371,7 @@
     padding-bottom: 0;
   }
 
-  .order-form__fieldset--name label {
+  .order-form__label-text {
     display: flex;
     align-items: baseline;
     margin-top: 1px;
@@ -347,8 +382,6 @@
     margin-top: 15px;
   }
 
-
-
   .order-form__label-text--name input {
     margin-left: 25px;
     margin-top: 10px;
@@ -357,14 +390,18 @@
 
   .order-form__fieldset--phone {
     margin-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
-  .order-form__legend--mail {
+  .order-form__fieldset-wrapper--phone {
+    margin-top: 0;
+  }
+
+  .order-form__label-legend--mail {
     margin-top: 20px;
   }
 
-  .order-form__legend--phone {
+  .order-form__label-legend--phone {
     margin-top: 65px;
   }
 
@@ -406,12 +443,12 @@
   }
 
   .order-form__icon {
-    right: 70px;
-    bottom: 36px;
+    right: 25px;
+    bottom: 20px;
   }
 
   .order-form__fieldset--mail .order-form__icon {
-    bottom: 66px;
+    bottom: 10px;
   }
 
   .order-form__legend--addition {
@@ -420,7 +457,7 @@
 
   .order-form__fieldset--addition textarea {
     flex-basis: 500px;
-    margin-top: 45px;
+    margin-top: 50px;
   }
 
   .order-form__submit {
@@ -449,7 +486,8 @@
     width: $desktop-content-width;
   }
 
-  .order-form__legend {
+  .order-form__legend,
+  .order-form__label-legend {
     flex-basis: 90px;
     margin-top: 55px;
     margin-right: auto;
@@ -471,29 +509,29 @@
     justify-content: flex-start;
   }
 
-  .order-form__fieldset--color label {
+  .order-form__label-checkbox {
     flex-basis: 23%;
     margin-top: 58px;
   }
 
-  .order-form__legend.order-form__legend--color {
+  .order-form__legend--color {
     margin-top: 65px;
   }
 
-  .order-form__legend.order-form__legend--name {
+  .order-form__legend--name {
     margin-top: 16px;
   }
 
-  .order-form__legend.order-form__legend--phone {
+  .order-form__label-legend--phone {
     margin-top: 65px;
   }
 
-  .order-form__legend.order-form__legend--mail {
+  .order-form__label-legend--mail {
     margin-top: 25px;
   }
 
   .order-form__icon {
-    right: 225px;
+    right: 5px;
   }
 
   .order-form__fieldset--addition textarea {
@@ -513,6 +551,6 @@
 
   .order-form__submit {
     margin-left: 225px;
-    margin-top: 0;
+    margin-top: 5px;
   }
 }
