@@ -1,0 +1,128 @@
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("../fonts/MyriadPro-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal; 
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "MyriadPro", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+body {
+}
+.page-wrapper {
+  width: 768px;
+  margin: 0 auto;
+  padding: 15px;
+}
+/*--------------HEADER------------------------*/
+.header {
+  width: 100%;
+}
+.header__row {
+  flex-basis: 100%;
+  display: flex;
+}
+
+.header__logo {
+  margin-right: 90px;
+}
+
+.header__find {
+  margin-right: 20px;
+}
+
+.header__contact {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  line-height: 16px;
+  text-align: right;
+  font-weight: bold;
+  color: #7a853b;
+}
+
+.header__contact-desc {
+  font-size: 10px;
+  
+}
+
+.header__contact-tel {
+  font-size: 17px;
+  color: #7a853b;
+  text-decoration: none;
+  outline: none;
+}
+
+.header__nav {
+  background-color: #7a853b;
+}
+
+.header__contry-desc {
+  font-size: 10px;
+  line-height: 24px;
+}
+
+/*---------------MAIN-------------------------------*/
+
+.main-nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding: 5px 17px;
+}
+
+.accessories__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accessories__item {
+  flex-basis: 30%
+}
+
+.accessories__item-img {
+  width: 55px;
+  height: 55px;
+  float: left;
+}
+
+.connections__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*------------FOOTER--------------------*/
+
+.footer {
+  display:flex;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  flex-basis: 320px;
+}
+
+
+/*.page-wrapper {
+  width: 480px;
+}
+@media (min-width: 768px) {
+  .page-wrapper {
+    width: 768px;
+  }
+}*/
