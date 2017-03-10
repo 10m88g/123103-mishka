@@ -1,12 +1,16 @@
-var mainNav = document.querySelector('.main-nav');
-var mainNavToggle = mainNav.querySelector('.main-nav__toggle');
+;(function () {
+  'use strict';
 
-//Инициализация:
-mainNav.classList.remove('main-nav--opened');
-mainNav.classList.remove('main-nav--no-js');
+  var mainNav = document.querySelector('.main-nav');
+  var mainNavToggle = mainNav.querySelector('.main-nav__toggle');
 
-mainNavToggle.addEventListener('click', clickHandler);
+  //Инициализация:
+  mainNav.classList.remove('main-nav--opened');
+  mainNav.classList.remove('main-nav--no-js');
 
-function clickHandler (event) {
-  mainNav.classList.toggle('main-nav--opened');
-}
+  mainNavToggle.addEventListener('click', clickHandler);
+
+  function clickHandler() {
+    mainNav.classList.toggle('main-nav--opened');
+  }
+})();

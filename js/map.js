@@ -1,5 +1,7 @@
 
 function initMap() {
+  "use strict";
+
   var mapContainer = document.querySelector(".contacts__map");
 
   //удалим заглушку - picture и класс no-js
@@ -11,7 +13,8 @@ function initMap() {
     center: {lat: 59.936355, lng: 30.321623}
   });
 
-  var image = 'img/icon-map-pin.svg';
+  var image = "img/icon-map-pin.svg";
+  //noinspection JSUnresolvedVariable
   var beachMarker = new google.maps.Marker({
     position: {lat: 59.936355, lng: 30.321623},
     map: map,

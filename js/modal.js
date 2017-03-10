@@ -1,4 +1,6 @@
-"use strict";
+;(function () {
+
+'use strict';
 
 var modal = document.querySelector('.modal');
 var modalContent = document.querySelector('.modal__content');
@@ -7,7 +9,7 @@ var targets = document.querySelectorAll('.modal-show');
 targets.forEach = [].forEach;
 targets.forEach(function(target) {
   target.addEventListener('click', showModal);
-})
+});
 
 //полифилл closest для ИЕ
 if (window.Element && !Element.prototype.closest) {
@@ -18,15 +20,15 @@ if (window.Element && !Element.prototype.closest) {
             el = this;
         do {
             i = matches.length;
-            while (--i >= 0 && matches.item(i) !== el) {};
+            while (--i >= 0 && matches.item(i) !== el) {}
         } while ((i < 0) && (el = el.parentElement));
         return el;
     };
 }
 
 
-function showModal(evnt) {
-  evnt.preventDefault();
+function showModal(event) {
+  event.preventDefault();
   modal.hidden = false;
 
   //расположить модалку по центру видимой области
@@ -41,11 +43,12 @@ function showModal(evnt) {
   }, 10);
 }
 
-function hideModal (evnt) {
+function hideModal (event) {
   //закрываем по ESC или по клику на свободн области
-  if ( (evnt.type == "keyup") && (evnt.keyCode == 27) || (evnt.type == "click") && (!evnt.target.closest(".modal__content")) ) {
+  if ( (event.type === "keyup") && (event.keyCode === 27) || (event.type ==="click") && (!event.target.closest(".modal__content")) ) {
       modal.hidden = true;
       document.body.removeEventListener('click', hideModal);
       document.removeEventListener('keyup', hideModal);
     }
 }
+})();
